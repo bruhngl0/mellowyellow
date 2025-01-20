@@ -1,0 +1,107 @@
+.supreme-container {
+    width: 100vw;
+    height: 170vh;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+
+  
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    background-size: cover;
+    
+  }
+  
+  .supreme-logo {
+    background-color: red;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .supreme-date {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .supreme-grid {
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    position: relative;
+    width: 80vw;
+    
+    
+  }
+  
+  .grid-item {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+    margin:4px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  
+  background-size: cover;
+  }
+  
+  .grid-item.hovered {
+    flex: 3;
+    z-index: 2;
+    transform: scale(1);
+    box-shadow: 
+      0 5px 15px rgba(0, 0, 0, 0.3),
+      0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .grid-item.blur {
+    filter: blur(3px);
+  }
+  
+  .item-text {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: white;
+    font-size: 12px;
+  }
+  
+  .item-new {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+ 
+    padding: 2px 5px;
+    font-size: 10px;
+  }
+  
+  .item-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+  }
+  
+  .grid-item.hovered .item-content {
+    opacity: 0;
+  }
+
+  .screen-six-btn{
+    size: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }

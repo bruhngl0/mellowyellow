@@ -1,0 +1,46 @@
+.animated-btn {
+    position: relative;
+    padding: 10px 20px;
+    color: brown;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8em;
+    border: 2px solid transparent;
+    transition: 0.5s;
+    cursor: pointer;
+  
+    &:hover {
+      border: 2px solid brown;
+      text-decoration: none;
+    }
+  
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0 8px;
+      border-left: 2px solid #0e0e0e;
+      border-right: 2px solid #221f1f;
+      transition: 1s;
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 8px 0;
+      border-top: 2px solid#232020;
+      border-bottom: 2px solid #201d1d;
+      transition: 1s;
+    }
+  
+    &:hover::before {
+      inset: 0px 8px;
+      transform: rotateY(180deg);
+    }
+  
+    &:hover::after {
+      inset: 8px 0px;
+      transform: rotateX(180deg);
+    }
+  }

@@ -1,0 +1,131 @@
+
+
+
+.sticky-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgb(175, 175, 175);
+  }
+  
+  .sticky-section {
+    width: 40vw;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+
+    
+    .content {
+      
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-left: 1rem;
+      color: rgb(255, 255, 255);
+  
+      h1 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: #1f2937;
+      }
+  
+      p {
+       
+        color: #4b5563;
+        max-width: 80%;
+        line-height: 1.6;
+      }
+    }
+  }
+  
+  .scroll-section {
+    width: 60vw;
+
+  
+    .scroll-item {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     
+      
+      &:nth-child(odd) {
+       
+      }
+  
+      &:nth-child(even) {
+    
+      }
+  
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #1f2937;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        color: #4b5563;
+        line-height: 1.6;
+      }
+    }
+  }
+
+
+  .scroll-item-two{
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    >img{
+      width: 400px;
+  
+      margin: 2rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  
+  .scroll-item-three{
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+    >img{
+      width: 400px;
+     
+      margin: 2rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .scroll-image{
+    width: 400px;
+    height: 550px;
+    margin: 2rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+.image-container-love{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+@media (max-width: 500px) {
+  .sticky-container {
+    display: none;
+  
+}}
+  

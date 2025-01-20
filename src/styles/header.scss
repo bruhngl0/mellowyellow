@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'cool';
+    src: url('/coolmain.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 10; /* Increase z-index to ensure it's above other elements */
+   background-color: gray;
+}
+
+.header > nav a {
+    margin: 70px;
+    font-size: 15px;
+    font-family: cool, sans-serif;
+    font-weight: 100;
+    color: rgb(31, 30, 30);
+    text-decoration: none;
+   
+ 
+}
+
+/* Add this for the div below the header */
+.content-below-header {
+    position: relative;
+    z-index: 1; /* Lower z-index than the header */
+    padding-top: 80px; /* Adjust based on your header's height */
+}
+
+
+
+
+@media (max-width: 500px) {
+   
+    .header{
+        display: flex;
+    }
+
+    .header > nav a {
+        margin: 14px;
+        font-size: 15px;
+        font-family: cool, sans-serif;
+        font-weight: 100;
+        color: white;
+    }
+  }
