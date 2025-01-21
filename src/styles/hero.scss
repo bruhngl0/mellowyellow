@@ -8,139 +8,157 @@
 
 
 .hero1-main{
-    width: 100vw;
+    width: 98vw;
     height: 80vh;
     margin-top: 3rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+  
     margin: 0 auto;
     margin-top: 4rem;
-    
+    border: 1px solid gray;
+  
+ 
     
 }
 
-.hero1-one{
- width: 50%;
+.hero1-1{
+ width: 98vw;
+height: 10vh;
+background-color: red;
+display: flex;
+flex-direction: row;
 
- font-size: 40px;
 
- >h1{
-  
-    height: 10vh;
+}
+
+.hero1-1-1{
+    width: 50%;
+ 
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+   
+}
+
+.hero1-1-2{
+    width: 50%;
     border-bottom:1px solid gray ;
-    border-right:1px solid gray ;
-    border-top: 1px solid gray ;
-  
- }
+}
 
- >p{
-    font-size: 14px;
+.hero1-1-2-1{
+    height: 70%;
+    border-bottom: 1px solid gray;
+}
+
+
+
+.hero1-2{
     height: 10vh;
-    color: white;
- }
-}
-
-
-.hero1-mellow{
-    font-family: helvetica;
-    height: 20vh;
-    color: rgb(86, 86, 81);
-
-}
-.hero1-two{
-   width: 50%;
-   font-size: 20px;
-  border-top: 1px solid gray;
- 
-   }
-
-
-.hero1-two-one{
-    
+    width: 100%;
     border-bottom: 1px solid gray;
-    width: 100%;
-
-    
- 
-}
-
-.hero1-two-one-one{
-    height: 7vh;
-    border-bottom: 1px solid gray;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    >ul{
-        display: flex;
-        flex-direction: row;
-        list-style: disc;
-       justify-content: start;
-      align-items: start;
-      width: 100%;
-      font-family: helvetica;
-      font-size: 16px;
-
-        >li{
-            display: flex;
-            flex-direction: row;
-            list-style-type: disc;
-            padding:0 20px;
-            font-weight: 600;
-            color: black;
-        
-        }
-    }
-  
 }
 
 
-.hero1-two-one-two{
-    height: 3vh;
-  font-family: helvetica;
-
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    
-  
-}
 
 .hero1-3{
+    height: 60vh;
+    width: 100%;
+    
+     display: flex;
+     flex-direction: row;
   
 }
 
-
-.hero1-3-video{
-    width: 400px;
-    margin-top: 6.5rem;
-    margin-left: 19rem;
+.hero1-3-1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right:1px solid gray ;
 }
 
-.hero1-3-head{
+.hero1-3-2{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
-    font-size: 90px;
-    margin-left: 10rem;
-    color: rgb(0, 0, 0);
-    margin-top: 5.4rem;
-    font-weight: 900;
+  border-bottom: 1px solid gray;
+}
+
+
+
+.hero1-3-2-1{
+    width: 100%;
+    height: 30%;
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+
+  
+  }
+
+
+  .hero1-3-2-2{
+    width: 100%;
+    height: 70%;
+    background-color: green;
+    border-bottom: 1px solid gray;
+    
+    
+  }
+
+  .hero1-3-2-2-1{
+    width: 100%;
+    height: 50%;
+    background-color: silver;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid gray;
+
+  }
+
+
+  .hero1-3-2-2-1-1{
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid gray;
+
+
+ 
+  }
+
+  .hero1-3-2-2-1-2{
+    width: 50%;
+    height: 100%;
    
-}
+  }
 
-.hero1-3-grid1{
-    font-size: 14px;
-    color: rgb(65, 65, 68);
-    margin-top: 2rem;
-    margin-left: 36rem;
-   
-}
+  .hero1-3-2-2-2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+  
+  
+  
+  }
 
-.hero1-3-grid2{
-    font-size: 14px;
-    color: rgb(84, 84, 86);
-    margin-top: 0.5rem;
-    margin-left: 36rem;
-}
+  .hero1-3-2-2-2-1{
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+ 
+  
+  }
+
+  .hero1-3-2-2-2-2{
+    width: 50%;
+    height: 100%;
+
+  
+
+ 
+  }

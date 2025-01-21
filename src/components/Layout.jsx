@@ -4,9 +4,10 @@ import ScreenSix from './ScreenSix'
 import Products from './Products'
 import Footer from './Footer'
 
+import "../styles/layout.scss"
 const Layout = () => {
   return (
-    <div>
+    <div className='layout-main'>
         
        <Hero />
        <ScreenSix />
