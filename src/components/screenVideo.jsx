@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/screenvideo.scss';
+import '../styles/screenVideo.scss';
 import Header from './Header';
 
 const ScreenVideo = () => {
