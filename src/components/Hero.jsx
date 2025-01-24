@@ -3,15 +3,21 @@ import Waves from './Waves'
 import "../styles/hero.scss"
 import Moving from './Moving'
 import ScreenSix from './ScreenSix'
+import ScreenVideo from './screenVideo'
+import AnimatedServices from './AnimatedServices'
 
 const Hero = () => {
   return (
     <div className='hero1-main'>
       <div className='hero1-1'>
-       <div className='hero1-1-1'>MELLOW YELLOW</div>
+       <div className='hero1-1-1'>
+       <p> MELLOW&nbsp;&nbsp;YELLOW*---</p>
+        </div>
        <div className='hero1-1-2'>
        <div className='hero1-1-2-1'></div>
-       <div className='hero1-1-2-2'></div>
+       <div className='hero1-1-2-2'>
+        <Moving />
+       </div>
        </div>
     </div>
 
@@ -29,19 +35,19 @@ const Hero = () => {
 
 
       <div className='hero1-3-2'>
-        <div className='hero1-3-2-1'></div>
+        <div className='hero1-3-2-1'>
+     
+    
+
+     <AnimatedServices />
+  
+     
+  
+        </div>
        
-       
+      
         <div className='hero1-3-2-2'>
-        <div className='hero1-3-2-2-1'>
-         <div className='hero1-3-2-2-1-1'></div>
-         <div className='hero1-3-2-2-1-2'></div>
-         
-        </div>
-        <div className='hero1-3-2-2-2'>
-        <div className='hero1-3-2-2-2-1'></div>
-        <div className='hero1-3-2-2-2-2'></div>
-        </div>
+          <ScreenVideo />
         </div>
       </div>
 

@@ -3,7 +3,7 @@ import Hero from './Hero'
 import ScreenSix from './ScreenSix'
 import Products from './Products'
 import Footer from './Footer'
-
+import AnimatedServices from './AnimatedServices'
 import "../styles/layout.scss"
 const Layout = () => {
   return (
@@ -12,7 +12,6 @@ const Layout = () => {
        <Hero />
        <ScreenSix />
        <Products />
-      
        <Footer />
     </div>
   )

@@ -1,7 +1,7 @@
 
 @font-face {
-    font-family: 'collins';
-    src: url('/collins.otf') format('opentype');
+    font-family: 'shadow';
+    src: url('/ShadowHand.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -25,7 +25,7 @@
 .hero1-1{
  width: 98vw;
 height: 10vh;
-background-color: red;
+
 display: flex;
 flex-direction: row;
 
@@ -34,10 +34,33 @@ flex-direction: row;
 
 .hero1-1-1{
     width: 50%;
- 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-right: 1px solid gray;
     border-bottom: 1px solid gray;
 
+    >p{
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: rgb(255, 255, 255);
+      font-size: 75px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+
+      font-family:  Helvetica;
+      background-color: rgb(65, 65, 67);
+    
+      margin: 0 auto;
+   
+     
+
+    
+    }
    
 }
 
@@ -49,14 +72,31 @@ flex-direction: row;
 .hero1-1-2-1{
     height: 70%;
     border-bottom: 1px solid gray;
+ 
+   
 }
 
+.hero1-1-2-2{
+  height: 28%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: rgb(164, 6, 6);
+  display: flex;
 
+
+
+
+
+}
 
 .hero1-2{
     height: 10vh;
     width: 100%;
     border-bottom: 1px solid gray;
+
+   
 }
 
 
@@ -76,6 +116,8 @@ flex-direction: row;
     display: flex;
     flex-direction: column;
     border-right:1px solid gray ;
+
+  
 }
 
 .hero1-3-2{
@@ -83,7 +125,7 @@ flex-direction: row;
   height: 100%;
   display: flex;
   flex-direction: column;
-
+  overflow: hidden;
   border-bottom: 1px solid gray;
 }
 
@@ -95,6 +137,18 @@ flex-direction: row;
     border-bottom: 1px solid gray;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+ 
+
+    >h1{
+ 
+      font-size: 30px;
+      padding: 20px;
+      background-color: rgb(238, 238, 223);
+      
+    }
 
   
   }

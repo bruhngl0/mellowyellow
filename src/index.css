@@ -1,11 +1,11 @@
 
 * {
-  margin: 0;
+
   padding: 0;
 
   font-family: helvetica;
-  background-color: #fcfcfc;
- 
+  background-color: transparent;
+
 
 }
 
@@ -15,6 +15,10 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  margin: 0;
+padding: 0;
+overflow-x: hidden;
 }
 
 ul {
@@ -27,4 +31,6 @@ ul {
   padding-inline-start: 0px;
   unicode-bidi: isolate;
 }
+
+
 

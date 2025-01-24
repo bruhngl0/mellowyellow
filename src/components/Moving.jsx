@@ -38,7 +38,7 @@ const Moving = () => {
       <div
         ref={scrollRef}
         className="scroll-text"
-        style={{ scrollBehavior: 'auto' }}
+     
       >
         <div ref={contentRef} className="text-content">
           <span className="mx-4"> *BRANDING*</span>

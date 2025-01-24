@@ -9,7 +9,7 @@
   }
   
   .sticky-section {
-    width: 40vw;
+    width: 35vw;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -42,7 +42,7 @@
   }
   
   .scroll-section {
-    width: 60vw;
+    width: 65vw;
 
   
     .scroll-item {
@@ -84,7 +84,7 @@
     align-items: center;
 
     >img{
-      width: 400px;
+      width: 200px;
   
       margin: 2rem;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -118,6 +118,7 @@
 .image-container-love{
   display: flex;
   flex-direction: row;
+  
 }
 
 
