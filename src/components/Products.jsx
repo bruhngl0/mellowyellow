@@ -7,12 +7,12 @@ import ImageAni from './ImageAni';
 import '../styles/products.scss';
 
 
-import image1 from "../../public/mainSix/pack1.png"
-import image2 from "../../public/mainSix/pack2.png"
-import image3 from "../../public/mainSix/pack3.png"
-import image4 from "../../public/mainSix/pack4.png"
-import image5 from "../../public/mainSix/pack5.png"
-import image6 from "../../public/mainSix/pack6.png"
+import image1 from "../../public/blue.png"
+import image2 from "../../public/blue.png"
+import image3 from "../../public/blue.png"
+import image4 from "../../public/blue.png"
+import image5 from "../../public/blue.png"
+import image6 from "../../public/blue.png"
 
 
 

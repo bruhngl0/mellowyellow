@@ -29,8 +29,8 @@ const AnimatedServices= () => {
       <p>BeSPOKE</p>
       <p>INNOVATE</p>
       <p>CUSTOMIZE</p>
-      <p>BUILD</p>
-      <p>INSTALL</p>
+      <p>CREATE</p>
+      <p>DEPLOY</p>
       <p>MAGIC!</p>
       </div>
     </div>

@@ -4,7 +4,7 @@ import Header from './Header';
 
 const ScreenVideo = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [videoSrc, setVideoSrc] = useState('watch.mp4');
+  const [videoSrc, setVideoSrc] = useState('love.mp4');
 
   useEffect(() => {
     // Function to handle window resize

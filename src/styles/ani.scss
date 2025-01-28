@@ -1,4 +1,9 @@
-
+@font-face {
+  font-family: 'shadow';
+  src: url('collins.otf') format('open-type');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
   .main-layout-ani{
@@ -17,7 +22,7 @@
   margin: 0 auto;
   padding: zero;
   overflow-x: hidden;
-
+  font-family: shadow;
   
     
 }
@@ -34,7 +39,7 @@
    width: 90%;
    height: 100%;
    line-height: 10px;
- 
+   font-family: shadow;
    
   }
   
@@ -49,7 +54,7 @@
     letter-spacing: -0.07em;
     margin: 0 auto;
     align-items: flex-end;
- 
+    font-family: shadow;
 
 
    
@@ -63,6 +68,7 @@
     font-size: 1rem;
     line-height: 10px;
     margin: 0 auto;
+    font-family: shadow;
    
       
   }
