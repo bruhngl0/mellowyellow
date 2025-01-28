@@ -9,6 +9,11 @@
 
 }
 
+@font-face {
+  font-family: "Schabo";
+  src: url('../src/assets/fonts/SCHABO-Condensed.otf') format('opentype');
+}
+
 
 body{
   display: flex;
