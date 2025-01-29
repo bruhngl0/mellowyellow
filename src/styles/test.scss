@@ -1,0 +1,167 @@
+.identifont-container {
+    background-color: #e5e1d6;
+    color: #000;
+    font-family: "Helvetica", sans-serif;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+  }
+  
+  .identifont-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+
+    >p{
+      font-size: 14px;
+      margin: 0 auto;
+      padding: 5px 0;
+
+    }
+  }
+  
+  .menu-icon, .search-icon {
+    font-size: 20px;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  .category {
+    background: #d9d4c7;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+   
+   
+
+  }
+  
+  .arrow {
+    font-size: 20px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  .latest-fonts, .recently-added {
+    background: #d9d4c7;
+    padding: 15px;
+    width: 48%;
+  }
+  
+  .font-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+
+
+  .identifont-container {
+    background-color: #e5e1d6;
+    color: #000;
+    font-family: "Helvetica", sans-serif;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Grainy noise effect using a pseudo-element */
+  .identifont-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"); /* Change to any noise texture */
+    opacity: 0.5; /* Adjust intensity */
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Header */
+  .identifont-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Menu and search icons */
+  .menu-icon, .search-icon {
+    font-size: 20px;
+  }
+  
+  /* Categories section */
+  .categories {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Category styles */
+  .category {
+    background: #d9d4c7;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Arrow icon */
+  .arrow {
+    font-size: 20px;
+  }
+  
+  /* Content section */
+  .content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Latest fonts & Recently added */
+  .latest-fonts, .recently-added {
+    background: #d9d4c7;
+    padding: 15px;
+    width: 48%;
+  }
+  
+  /* Font name styling */
+  .font-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
