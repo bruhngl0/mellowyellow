@@ -33,7 +33,7 @@ const clientsData = {
     images: [image2, image3, image1],
     content: {
       title: "Desk Garden",
-      services: "Product Design, Sustainability",
+      services: "Product Design, Sustainability, Branding",
       year: "2022", 
       description:
         "Revolutionizing workspace greenery with our innovative desk planters. Each piece is thoughtfully crafted to bring nature into your office environment while maintaining a minimal footprint.",
