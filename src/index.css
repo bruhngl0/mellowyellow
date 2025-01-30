@@ -20,8 +20,9 @@ body {
   align-items: center;
   width: 100vw;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+padding: 0;
+overflow-x: hidden;
+background-color: #e5e1d6;
 }
 
 ul {

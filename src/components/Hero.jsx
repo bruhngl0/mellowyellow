@@ -5,6 +5,7 @@ import Moving from './Moving'
 import ScreenSix from './ScreenSix'
 import ScreenVideo from './screenVideo'
 import AnimatedServices from './AnimatedServices'
+import Test from './Test'
 
 const Hero = () => {
   return (
@@ -29,14 +30,11 @@ const Hero = () => {
 
 
 
-    <div className='hero1-2'>
-     
-   
-    </div>
+    
             
     <div className='hero1-3'>
       <div className='hero1-3-1'>
-        <Waves />
+ 
       </div>
 
 
@@ -62,7 +60,10 @@ const Hero = () => {
     
     </div>        
          
-            
+    <div className='hero1-2'>
+     <Waves />
+   
+    </div>
        
      </div>
   )
