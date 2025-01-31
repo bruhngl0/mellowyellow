@@ -36,3 +36,8 @@ ul {
   padding-inline-start: 0px;
   unicode-bidi: isolate;
 }
+
+
+::-webkit-scrollbar {
+  display: none;
+}
