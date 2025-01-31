@@ -30,9 +30,15 @@ const Test = () => {
       <div className="content">
         <div className="latest-fonts">
           <h3>Latest font inclusions</h3>
-         
+          <p>
+            December 2023 - 34 typefaces curated by P.A. Malley. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+          </p>
         </div>
-       
+        <div className="recently-added">
+          <h3>Recently added</h3>
+          <span className="font-name">BIECTIVE</span>
+          <p>27/12/2023 - Created by James Edinson</p>
+        </div>
       </div>
     </div>
   );

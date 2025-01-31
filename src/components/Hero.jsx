@@ -23,7 +23,7 @@ const Hero = () => {
         </ul>
        </div>
        <div className='hero1-1-2-2'>
-        <Moving />
+     
        </div>
        </div>
     </div>
@@ -37,7 +37,6 @@ const Hero = () => {
         <div className='test-container'>
     
         </div>
-        <Test />
       </div>
 
 
@@ -65,7 +64,7 @@ const Hero = () => {
          
     <div className='hero1-2'>
   
-   
+   <Waves />
     </div>
        
      </div>
