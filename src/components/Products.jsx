@@ -1,41 +1,29 @@
-import React, { useState} from 'react';
-
-
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ImageAni from './ImageAni';
-
-
 import '../styles/products.scss';
-
-
-import image1 from "../../public/blue.png"
-import image2 from "../../public/blue.png"
-import image3 from "../../public/blue.png"
-import image4 from "../../public/blue.png"
-import image5 from "../../public/blue.png"
-import image6 from "../../public/blue.png"
-
-
+import image1 from "../../public/blue.png";
+import image2 from "../../public/blue.png";
+import image3 from "../../public/blue.png";
+import image4 from "../../public/blue.png";
+import image5 from "../../public/blue.png";
+import image6 from "../../public/blue.png";
 
 const Products = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedId, setSelectedId] = useState(null);
-  const [productDataSelect, setProductDataSelect] = useState(null)
-
-
-
-
-
-
-  //Product Data
+  const [productDataSelect, setProductDataSelect] = useState(null);
+  const navigate = useNavigate();
 
   const productData = [
     {
       id: "product-1",
-      image:  image1,
+      image: image1,
       name: "Love Pot",
       description: "A beautiful pot to show your love and affection.",
       price: "$39.99",
       features: ["Feature one description", "Feature two description", "Feature three description"],
+      redirect: "/services/influencer-marketing",
       specifications: {
         width: "20 x 30 cm",
         length: "500g",
@@ -49,13 +37,13 @@ const Products = () => {
       description: "This sleek concrete coffee table is durable, fiberglass-reinforced, and available in multiple colors. Water, moss, and stain-resistant, it’s easy to maintain and perfect for any indoor or outdoor space.",
       price: "$29.99",
       features: ["FROST-RESISTANCE", "UV-RESISTANCE", "OUTDOOR-READY"],
+      redirect: "/services/content-creation",
       specifications: {
         dimension: "Height 1ft 6inch",
         weight: "3kg",
         material: "MS, SS, WOOD"
       }
     },
-
     {
       id: "product-3",
       image: image3,
@@ -63,6 +51,7 @@ const Products = () => {
       description: "A modern pot with a classic scroll design.",
       price: "$29.99",
       features: ["Feature A description", "Feature B description", "Feature C description"],
+      redirect: "/services/social-media-management",
       specifications: {
         dimension: "15 x 20 cm",
         weight: "300g",
@@ -77,6 +66,7 @@ const Products = () => {
       description: "A modern pot with a classic scroll design.",
       price: "$29.99",
       features: ["Feature A description", "Feature B description", "Feature C description"],
+      redirect: "/services/pr-activities",
       specifications: {
         dimension: "15 x 20 cm",
         weight: "300g",
@@ -91,6 +81,7 @@ const Products = () => {
       description: "A modern pot with a classic scroll design.",
       price: "$29.99",
       features: ["Feature A description", "Feature B description", "Feature C description"],
+      redirect: "/services/branding",
       specifications: {
         dimension: "15 x 20 cm",
         weight: "300g",
@@ -105,6 +96,7 @@ const Products = () => {
       description: "A modern pot with a classic scroll design.",
       price: "$29.99",
       features: ["Feature A description", "Feature B description", "Feature C description"],
+      redirect: "/services/web-design-and-development",
       specifications: {
         dimension: "15 x 20 cm",
         weight: "300g",
@@ -120,8 +112,8 @@ const Products = () => {
     console.log(selectedProduct)
     setSelectedId(selectedProduct.id);
     setSelectedImage(selectedProduct.image);
-    setProductDataSelect(selectedProduct)
-    
+    setProductDataSelect(selectedProduct)    
+    navigate(selectedProduct.redirect);
   };
 
   const handleClose = () => {

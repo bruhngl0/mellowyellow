@@ -34,7 +34,7 @@ const Hero = () => {
             
     <div className='hero1-3'>
       <div className='hero1-3-1'>
- 
+        <Test />
       </div>
 
 
