@@ -1,13 +1,16 @@
 .identifont-container {
-    background-color: #e5e1d6;
-    color: #000;
+   
+    color: #fff;
     font-family: "Helvetica", sans-serif;
     padding: 20px;
+   
+   
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: start;
+    object-fit: contain;
   }
   
   .identifont-header {
@@ -34,11 +37,13 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+    color: #fff;
+   
   }
   
   .category {
-    background: #d9d4c7;
+    background: #1a1a1a;
     padding: 15px;
     flex: 1;
     text-align: center;
@@ -47,6 +52,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #fff;
    
    
    
@@ -62,12 +68,14 @@
     justify-content: space-between;
     margin-top: 30px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    color: #fff;
+    background-color: #1a1a1a;
   }
   
   .latest-fonts, .recently-added {
-    background: #d9d4c7;
+    background: #303030;
     padding: 15px;
-    width: 48%;
+  
   }
   
   .font-name {
@@ -78,7 +86,7 @@
 
 
   .identifont-container {
-    background-color: #e5e1d6;
+    background-color: #1c1c1b;
     color: #000;
     font-family: "Helvetica", sans-serif;
     padding: 20px;
@@ -127,7 +135,7 @@
   
   /* Category styles */
   .category {
-    background: #d9d4c7;
+    background: #151515;
     padding: 15px;
     flex: 1;
     text-align: center;
@@ -150,13 +158,14 @@
     margin-top: 30px;
     position: relative;
     z-index: 2;
+    background-color: #151515;
   }
   
   /* Latest fonts & Recently added */
   .latest-fonts, .recently-added {
-    background: #d9d4c7;
+    background: #10100f;
     padding: 15px;
-    width: 48%;
+   
   }
   
   /* Font name styling */

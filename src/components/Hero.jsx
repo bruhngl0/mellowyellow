@@ -34,6 +34,9 @@ const Hero = () => {
             
     <div className='hero1-3'>
       <div className='hero1-3-1'>
+        <div className='test-container'>
+    
+        </div>
         <Test />
       </div>
 
@@ -61,7 +64,7 @@ const Hero = () => {
     </div>        
          
     <div className='hero1-2'>
-     <Waves />
+  
    
     </div>
        

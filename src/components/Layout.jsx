@@ -12,9 +12,9 @@ const Layout = () => {
         
        <Hero />
        <ScreenSix />
-       <Products />
+     
       
-       <Test />
+
        <Footer />
     </div>
   )
