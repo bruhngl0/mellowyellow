@@ -12,7 +12,7 @@ const Hero = () => {
     <div className='hero1-main'>
       <div className='hero1-1'>
        <div className='hero1-1-1'>
-       <p> MELLOW&nbsp;&nbsp;YELLOW</p>
+       <p> MELLOW&nbsp;&nbsp;YELLOW </p>
         </div>
        <div className='hero1-1-2'>
        <div className='hero1-1-2-1'>

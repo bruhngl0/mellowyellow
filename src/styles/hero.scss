@@ -15,7 +15,8 @@
   color: white;
     margin: 0 auto;
     margin-top: 4rem;
-    border: 1px solid rgb(224, 218, 218);
+    border: 1px solid rgb(60, 58, 58);
+    box-shadow: 0 0 8px 0 rgba(244, 243, 243, 0.8);
   
  
     
@@ -29,6 +30,7 @@ display: flex;
 flex-direction: row;
 
 
+
 }
 
 .hero1-1-1{
@@ -36,8 +38,9 @@ flex-direction: row;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid rgb(176, 173, 173);
-    border-bottom: 1px solid rgb(196, 193, 193);
+    border-right: 1px solid rgb(60, 58, 58);
+    border-bottom: 1px solid rgb(60, 58, 58);
+    background-color: rgb(60, 58, 58);
 
     >p{
       display: flex;
@@ -46,16 +49,18 @@ flex-direction: row;
       align-items: center;
       width: 100%;
       height: 100%;
-      color: rgb(237, 237, 236);
-      font-size: 75px;
-      font-weight: 600;
-      letter-spacing: -0.05em;
+      color: rgb(136, 136, 129);
+      font-weight: 900;
+      font-size: 18px;
+    
+     
+     
      padding: 1.5rem;
       font-family:  Helvetica;
       
     
       margin: 0 auto;
-   
+  
      
 
     
@@ -65,16 +70,17 @@ flex-direction: row;
 
 .hero1-1-2{
     width: 50%;
-    border-bottom:1px solid rgb(186, 181, 181) ;
+    border-bottom:1px solid rgb(60, 58, 58);
+    background-color: rgb(60, 58, 58);
 }
 
 .hero1-1-2-1{
-    height: 70%;
-    border-bottom: 1px solid rgb(179, 175, 175);
+    height: auto;
+    border-bottom: 1px solid rgb(60, 58, 58);
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
+     display: none;
     >ul{
       display: flex; 
       flex-direction: row;
@@ -95,7 +101,7 @@ flex-direction: row;
 }
 
 .hero1-1-2-2{
-  height: 28%;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -112,6 +118,7 @@ flex-direction: row;
 .hero1-2{
     height: 10vh;
     width: 100%;
+    
    
    
    
@@ -128,7 +135,7 @@ flex-direction: row;
      display: flex;
      flex-direction: row;
      background-color: #131312;;
-     border-bottom: 1px solid rgb(214, 211, 211);
+     border-bottom: 1px solid rgb(60, 58, 58);
   
 }
 
@@ -137,7 +144,7 @@ flex-direction: row;
     height: auto;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid gray;
+    border-right: 1px solid rgb(60, 58, 58);
     justify-content: flex-end;
     align-items: flex-end;
     
@@ -159,7 +166,7 @@ flex-direction: row;
 .hero1-3-2-1{
     width: 100%;
     height: auto;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(60, 58, 58);
     display: flex;
     flex-direction: column;
     justify-content: center;
