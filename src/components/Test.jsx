@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/test.scss";
 import { FaBars, FaSearch } from "react-icons/fa";
+import FloatingDock from "./FloatingDock";
 
 const Test = () => {
   return (
@@ -12,19 +13,10 @@ const Test = () => {
         <p>01/ DENTIFONT</p>
        
       </header>
-      <div className="categories">
-        <div className="category">
-          <span>APPEARANCE</span>
-          <span className="arrow">→</span>
-        </div>
-        <div className="category">
-          <span>SIMILARITY</span>
-          <span className="arrow">→</span>
-        </div>
-        <div className="category">
-          <span>YEAR</span>
-          <span className="arrow">→</span>
-        </div>
+      <div className="categories"  >
+        
+          <FloatingDock />
+       
        
       </div>
       <div className="content">
@@ -32,13 +24,11 @@ const Test = () => {
           <h3>Latest font inclusions</h3>
           <p>
             December 2023 - 34 typefaces curated by P.A. Malley. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+            December 2023 - 34 typefaces curated by P.A. Malley. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
+            December 2023 - 34 typefaces curated by P.A. Malley. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
           </p>
         </div>
-        <div className="recently-added">
-          <h3>Recently added</h3>
-          <span className="font-name">BIECTIVE</span>
-          <p>27/12/2023 - Created by James Edinson</p>
-        </div>
+       
       </div>
     </div>
   );

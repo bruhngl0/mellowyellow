@@ -1,3 +1,4 @@
+import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
 
@@ -9,6 +10,7 @@ import ScreenSix from './components/ScreenSix';
 import Footer from './components/Footer';
 import AnimatedServices from './components/AnimatedServices';
 import Client from "./components/Client";
+import FloatingDock from './components/FloatingDock';
 
 
 
@@ -96,6 +98,7 @@ function App() {
         <Route path= "/screensix" element= {< ScreenSix/>} />
         <Route path= "/products" element={<Products />} />
         <Route path= "/ani" element= {<AnimatedServices />} />
+        <Route path= "/floating-dock" element= {<FloatingDock />} />
         <Route
           path="/client-1"
           element={<Client {...clientsData.client1} />}

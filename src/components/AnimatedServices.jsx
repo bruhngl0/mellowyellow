@@ -26,7 +26,7 @@ const AnimatedServices= () => {
     <div className='layout-two-ani'>
  
       <div className={`image-container-two-ani ani-image-${currentImageIndex}`}> 
-      <p>BeSPOKE</p>
+      <p>BRANDING</p>
       <p>INNOVATE</p>
       <p>CUSTOMIZE</p>
       <p>CREATE</p>

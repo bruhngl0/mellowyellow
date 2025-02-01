@@ -11,6 +11,7 @@
     justify-content: flex-end;
     align-items: start;
     object-fit: contain;
+    background-color: black;
   }
   
   .identifont-header {
@@ -20,6 +21,8 @@
     align-items: center;
     font-size: 12px;
     font-weight: bold;
+    color: #FFCF01;;
+    background-color: black;
 
     >p{
       font-size: 14px;
@@ -37,8 +40,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
-    color: #fff;
+ 
+    color: #666161;
+    width: 100%;
+    background-color: black;
    
   }
   
@@ -52,7 +57,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: #666161;
    
    
    
@@ -67,9 +72,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    color: #fff;
+    box-shadow: 0 0 10px 0 rgba(237, 235, 235, 0.5);
+    color: #6a6a67;
     background-color: #1a1a1a;
+    
   }
   
   .latest-fonts, .recently-added {
@@ -92,6 +98,7 @@
     padding: 20px;
     position: relative;
     overflow: hidden;
+    background-color: black;
   }
   
   /* Grainy noise effect using a pseudo-element */
@@ -131,6 +138,7 @@
     margin-top: 20px;
     position: relative;
     z-index: 2;
+  
   }
   
   /* Category styles */

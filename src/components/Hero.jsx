@@ -6,6 +6,7 @@ import ScreenSix from './ScreenSix'
 import ScreenVideo from './screenVideo'
 import AnimatedServices from './AnimatedServices'
 import Test from './Test'
+import FloatingDock from './FloatingDock'
 
 const Hero = () => {
   return (
@@ -34,8 +35,11 @@ const Hero = () => {
             
     <div className='hero1-3'>
       <div className='hero1-3-1'>
+        <div className='hero1-3-1-1'>
+        
+        </div>
         <div className='test-container'>
-    
+         <Test />
         </div>
       </div>
 
