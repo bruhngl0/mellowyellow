@@ -63,8 +63,8 @@
         align-items: center;
         height: 450px;
         padding: 0 100px;
-        border-top: 2px solid black;
-        border-right: 2px solid black;
+        border-top: 2px solid white;
+        border-right: 2px solid white;
 
         .description {
           margin-top: 15%;
@@ -94,7 +94,7 @@
             justify-content: center;
             align-items: start;
             padding: 0 50px;
-            border-top: 2px solid black;
+            border-top: 2px solid white;
 
             .service,
             .year {
@@ -115,6 +115,7 @@
       .next-button,
       .home-button {
         border: none;
+        color: #fff;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 

@@ -1,24 +1,18 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
 
-
-
-import Products from './components/Products'
-import Layout from './components/Layout';
-import ScreenSix from './components/ScreenSix';
-import Footer from './components/Footer';
-import AnimatedServices from './components/AnimatedServices';
+import Products from "./components/Products";
+import Layout from "./components/Layout";
+import ScreenSix from "./components/ScreenSix";
+import Footer from "./components/Footer";
+import AnimatedServices from "./components/AnimatedServices";
 import Client from "./components/Client";
-import FloatingDock from './components/FloatingDock';
-
-
+import FloatingDock from "./components/FloatingDock";
 
 import image1 from "../public/mellow1.png";
 import image3 from "../public/mellow3.png";
 import image2 from "../public/mellow2.png";
-
-
 
 const clientsData = {
   client1: {
@@ -29,17 +23,17 @@ const clientsData = {
       year: "2023",
       description:
         "Specializing in modern concrete planters that blend functionality with aesthetic appeal. Our planters are designed to enhance any space while providing optimal growing conditions for your plants.",
-    }
+    },
   },
   client2: {
     images: [image2, image3, image1],
     content: {
       title: "Desk Garden",
       services: "Product Design, Sustainability, Branding",
-      year: "2022", 
+      year: "2022",
       description:
         "Revolutionizing workspace greenery with our innovative desk planters. Each piece is thoughtfully crafted to bring nature into your office environment while maintaining a minimal footprint.",
-    }
+    },
   },
   client3: {
     images: [image3, image1, image2],
@@ -49,7 +43,7 @@ const clientsData = {
       year: "2023",
       description:
         "Creating functional art through our handcrafted tables. Each piece combines organic materials with modern design principles to deliver furniture that serves as both a practical surface and a conversation starter.",
-    }
+    },
   },
   client4: {
     images: [image1, image2, image3],
@@ -59,7 +53,7 @@ const clientsData = {
       year: "2021",
       description:
         "Reimagining breeze blocks for contemporary spaces. Our designs provide privacy and ventilation while creating stunning geometric patterns that transform ordinary walls into architectural features.",
-    }
+    },
   },
   client5: {
     images: [image2, image3, image1],
@@ -69,7 +63,7 @@ const clientsData = {
       year: "2022",
       description:
         "Elevating interior spaces with our distinctive wall cladding solutions. We combine traditional materials with contemporary patterns to create surfaces that add depth and character to any room.",
-    }
+    },
   },
   client6: {
     images: [image3, image1, image2],
@@ -79,55 +73,28 @@ const clientsData = {
       year: "2023",
       description:
         "Pushing the boundaries of concrete as an artistic medium. Our sculptures challenge perceptions of industrial materials, creating fluid forms that seem to defy the material's rigid nature.",
-    }
+    },
   },
-  // Add more client data as needed
 };
 
-
-
-
-
 function App() {
-
-
   return (
     <Router>
       <Routes>
-        <Route path= "/" element= {<Layout />}/>
-        <Route path= "/screensix" element= {< ScreenSix/>} />
-        <Route path= "/products" element={<Products />} />
-        <Route path= "/ani" element= {<AnimatedServices />} />
-        <Route path= "/floating-dock" element= {<FloatingDock />} />
-        <Route
-          path="/client-1"
-          element={<Client {...clientsData.client1} />}
-        />
-        <Route
-          path="/client-2"
-          element={<Client {...clientsData.client2} />}
-        />
-        <Route
-          path="/client-3"
-          element={<Client {...clientsData.client3} />}
-        />
-        <Route
-          path="/client-4"
-          element={<Client {...clientsData.client4} />}
-        />
-        <Route
-          path="/client-5"
-          element={<Client {...clientsData.client5} />}
-        />
-        <Route
-          path="/client-6"
-          element={<Client {...clientsData.client6} />}
-        />
-        
-
+        <Route path="/" element={<Layout />} />
+        <Route path="/screensix" element={<ScreenSix />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/ani" element={<AnimatedServices />} />
+        <Route path="/floating-dock" element={<FloatingDock />} />
+        <Route path="/client-1" element={<Client {...clientsData.client1} />} />
+        <Route path="/client-2" element={<Client {...clientsData.client2} />} />
+        <Route path="/client-3" element={<Client {...clientsData.client3} />} />
+        <Route path="/client-4" element={<Client {...clientsData.client4} />} />
+        <Route path="/client-5" element={<Client {...clientsData.client5} />} />
+        <Route path="/client-6" element={<Client {...clientsData.client6} />} />
       </Routes>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
