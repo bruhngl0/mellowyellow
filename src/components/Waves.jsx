@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import { Noise } from 'noisejs';
 import "../styles/waves.scss"
+import { useColor } from '../context/ColorContext';
 
 const Waves = () => {
+  const { theme } = useColor();
   const svgRef = useRef(null);
   const containerRef = useRef(null);
   const animationFrameRef = useRef(null);
@@ -219,7 +221,7 @@ const Waves = () => {
   }, [setSize, initLines, updateMousePosition, tick]);
 
   return (
-    <div ref={containerRef} className="waves">
+    <div ref={containerRef} className="waves" style={{ stroke: theme.backgroundColor }}>
       <svg ref={svgRef} className="waves__svg"></svg>
     </div>
   );

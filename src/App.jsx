@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 
+import { ColorProvider } from "./context/ColorContext";
+
 import Products from "./components/Products";
 import Layout from "./components/Layout";
 import ScreenSix from "./components/ScreenSix";
@@ -9,6 +11,7 @@ import Footer from "./components/Footer";
 import AnimatedServices from "./components/AnimatedServices";
 import Client from "./components/Client";
 import FloatingDock from "./components/FloatingDock";
+import Services from "./components/Services";
 
 import image1 from "../public/mellow1.png";
 import image3 from "../public/mellow3.png";
@@ -77,22 +80,84 @@ const clientsData = {
   },
 };
 
-function App() {
+export const themes = [
+  //default theme
+  {
+    primaryColor: "#fff",
+    secondaryColor: "#000",
+    backgroundColor: "#000",
+  },
+  // Dark themes
+  {
+    primaryColor: "#fff", // Dodger Blue
+    secondaryColor: "#000", // Tomato Red
+    backgroundColor: "#ff0000", // Deep Black
+  },
+  {
+    primaryColor: "#fff", // Orange Red
+    secondaryColor: "#000", // Lime Green
+    backgroundColor: "seagreen", // Dark Grayish Black
+  },
+  {
+    primaryColor: "#fff", // Gold
+    secondaryColor: "#000", // Crimson
+    backgroundColor: "#ee5700", // Slightly Lighter Black
+  },
+  // Light themes
+  {
+    primaryColor: "#fff", // Vibrant Orange
+    secondaryColor: "#000", // Fresh Green
+    backgroundColor: "purple", // Light Gray
+  },
+  {
+    primaryColor: "#fff", // Strong Blue
+    secondaryColor: "#000", // Pink Magenta
+    backgroundColor: "pink", // Pure White
+  },
+  {
+    primaryColor: "#fff", // Deep Purple
+    secondaryColor: "#000", // Warm Orange
+    backgroundColor: "brown", // Soft White
+  },
+];
+
+const App = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route path="/screensix" element={<ScreenSix />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/ani" element={<AnimatedServices />} />
-        <Route path="/floating-dock" element={<FloatingDock />} />
-        <Route path="/client-1" element={<Client {...clientsData.client1} />} />
-        <Route path="/client-2" element={<Client {...clientsData.client2} />} />
-        <Route path="/client-3" element={<Client {...clientsData.client3} />} />
-        <Route path="/client-4" element={<Client {...clientsData.client4} />} />
-        <Route path="/client-5" element={<Client {...clientsData.client5} />} />
-        <Route path="/client-6" element={<Client {...clientsData.client6} />} />
-      </Routes>
+      <ColorProvider>
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          <Route path="/screensix" element={<ScreenSix />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/ani" element={<AnimatedServices />} />
+          <Route path="/floating-dock" element={<FloatingDock />} />
+          <Route
+            path="/client-1"
+            element={<Client {...clientsData.client1} />}
+          />
+          <Route
+            path="/client-2"
+            element={<Client {...clientsData.client2} />}
+          />
+          <Route
+            path="/client-3"
+            element={<Client {...clientsData.client3} />}
+          />
+          <Route
+            path="/client-4"
+            element={<Client {...clientsData.client4} />}
+          />
+          <Route
+            path="/client-5"
+            element={<Client {...clientsData.client5} />}
+          />
+          <Route
+            path="/client-6"
+            element={<Client {...clientsData.client6} />}
+          />
+          <Route path="services" element={<Services />} />
+        </Routes>
+      </ColorProvider>
     </Router>
   );
 }

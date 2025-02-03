@@ -1,20 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaChrome, FaFolder, FaTerminal, FaMusic, FaCog, FaUser } from 'react-icons/fa';
+import { useColor } from '../context/ColorContext'; // Import theme context
+import { themes } from '../App'; // Import theme sets
+
 import '../styles/floating-dock.scss';
 
 const FloatingDock = () => {
-  const dockItems = [
-    { icon: <FaChrome />, label: 'Chrome' },
-    { icon: <FaFolder />, label: 'Finder' },
-    { icon: <FaTerminal />, label: 'Terminal' },
-    { icon: <FaMusic />, label: 'Music' },
-    { icon: <FaCog />, label: 'Settings' },
-    { icon: <FaUser />, label: 'User' },
-    { icon: <FaMusic />, label: 'Music' },
-    { icon: <FaCog />, label: 'Settings' },
-    { icon: <FaUser />, label: 'User' },
-  ];
+  const { setTheme } = useColor(); // Access theme updater
 
   return (
     <motion.div
@@ -24,15 +16,38 @@ const FloatingDock = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="dock-items">
-        {dockItems.map((item, index) => (
+        {themes.map((theme, index) => (
           <motion.div
             key={index}
             className="dock-item"
-            whileHover={{ scale: 1.2, y: -10 }}
+            style={{
+              display: 'flex',
+              gap: '5px',
+              padding: '5px',
+              borderRadius: '10px',
+              cursor: 'pointer',
+              backgroundColor: theme.backgroundColor,
+            }}
+            whileHover={{ scale: 1.1, y: -5 }}
             whileTap={{ scale: 0.9 }}
+            onClick={() => setTheme(theme)}
           >
-            <div className="icon">{item.icon}</div>
-            <span className="label">{item.label}</span>
+            <div
+              style={{
+                width: '20px',
+                height: '20px',
+                backgroundColor: theme.primaryColor,
+                borderRadius: '5px',
+              }}
+            ></div>
+            <div
+              style={{
+                width: '20px',
+                height: '20px',
+                backgroundColor: theme.secondaryColor,
+                borderRadius: '5px',
+              }}
+            ></div>
           </motion.div>
         ))}
       </div>

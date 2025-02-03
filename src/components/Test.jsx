@@ -2,10 +2,12 @@ import React from "react";
 import "../styles/test.scss";
 import { FaBars, FaSearch } from "react-icons/fa";
 import FloatingDock from "./FloatingDock";
+import { useColor } from "../context/ColorContext";
 
 const Test = () => {
+  const { theme } = useColor();
   return (
-    <div className="identifont-container">
+    <div className="identifont-container" style={{ backgroundColor: theme.secondaryColor }}>
       <header className="identifont-header">
         
         <p>01/ DENTIFONT</p>
@@ -19,7 +21,7 @@ const Test = () => {
        
        
       </div>
-      <div className="content">
+      <div className="content" style={{ backgroundColor: theme.secondaryColor }}>
         <div className="latest-fonts">
           <h3>Latest font inclusions</h3>
           <p>
