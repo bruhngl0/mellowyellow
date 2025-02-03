@@ -2,12 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 
-import { ColorProvider } from "./context/ColorContext";
+import { ColorProvider, useColor } from "./context/ColorContext";
 
 import Products from "./components/Products";
 import Layout from "./components/Layout";
 import ScreenSix from "./components/ScreenSix";
-import Footer from "./components/Footer";
 import AnimatedServices from "./components/AnimatedServices";
 import Client from "./components/Client";
 import FloatingDock from "./components/FloatingDock";
@@ -81,43 +80,40 @@ const clientsData = {
 };
 
 export const themes = [
-  //default theme
   {
     primaryColor: "#fff",
-    secondaryColor: "#000",
+    secondaryColor: "#3c3a3a",
     backgroundColor: "#000",
   },
-  // Dark themes
   {
-    primaryColor: "#fff", // Dodger Blue
-    secondaryColor: "#000", // Tomato Red
-    backgroundColor: "#ff0000", // Deep Black
+    primaryColor: "#f48f23",
+    secondaryColor: "#dacdde",
+    backgroundColor: "#f2e3d8",
   },
   {
-    primaryColor: "#fff", // Orange Red
-    secondaryColor: "#000", // Lime Green
-    backgroundColor: "seagreen", // Dark Grayish Black
+    primaryColor: "#000",
+    secondaryColor: "#fdc614",
+    backgroundColor: "#3b4fa2",
   },
   {
-    primaryColor: "#fff", // Gold
-    secondaryColor: "#000", // Crimson
-    backgroundColor: "#ee5700", // Slightly Lighter Black
-  },
-  // Light themes
-  {
-    primaryColor: "#fff", // Vibrant Orange
-    secondaryColor: "#000", // Fresh Green
-    backgroundColor: "purple", // Light Gray
+    primaryColor: "#fff",
+    secondaryColor: "#db9ac4",
+    backgroundColor: "#f7cc47",
   },
   {
-    primaryColor: "#fff", // Strong Blue
-    secondaryColor: "#000", // Pink Magenta
-    backgroundColor: "pink", // Pure White
+    primaryColor: "#f7cc47",
+    secondaryColor: "#f1b3d1",
+    backgroundColor: "#f8b527",
   },
   {
-    primaryColor: "#fff", // Deep Purple
-    secondaryColor: "#000", // Warm Orange
-    backgroundColor: "brown", // Soft White
+    primaryColor: "#000",
+    secondaryColor: "pink",
+    backgroundColor: "hotpink",
+  },
+  {
+    primaryColor: "#fff",
+    secondaryColor: "#914148",
+    backgroundColor: "#f9e5ce",
   },
 ];
 
@@ -127,34 +123,16 @@ const App = () => {
       <ColorProvider>
         <Routes>
           <Route path="/" element={<Layout />} />
-          <Route path="/screensix" element={<ScreenSix />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/ani" element={<AnimatedServices />} />
-          <Route path="/floating-dock" element={<FloatingDock />} />
-          <Route
-            path="/client-1"
-            element={<Client {...clientsData.client1} />}
-          />
-          <Route
-            path="/client-2"
-            element={<Client {...clientsData.client2} />}
-          />
-          <Route
-            path="/client-3"
-            element={<Client {...clientsData.client3} />}
-          />
-          <Route
-            path="/client-4"
-            element={<Client {...clientsData.client4} />}
-          />
-          <Route
-            path="/client-5"
-            element={<Client {...clientsData.client5} />}
-          />
-          <Route
-            path="/client-6"
-            element={<Client {...clientsData.client6} />}
-          />
+          <Route path="screensix" element={<ScreenSix />} />
+          <Route path="products" element={<Products />} />
+          <Route path="ani" element={<AnimatedServices />} />
+          <Route path="floating-dock" element={<FloatingDock />} />
+          <Route path="client-1" element={<Client {...clientsData.client1} />} />
+          <Route path="client-2" element={<Client {...clientsData.client2} />} />
+          <Route path="client-3" element={<Client {...clientsData.client3} />} />
+          <Route path="client-4" element={<Client {...clientsData.client4} />} />
+          <Route path="client-5" element={<Client {...clientsData.client5} />} />
+          <Route path="client-6" element={<Client {...clientsData.client6} />} />
           <Route path="services" element={<Services />} />
         </Routes>
       </ColorProvider>

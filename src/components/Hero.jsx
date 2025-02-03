@@ -4,53 +4,75 @@ import "../styles/hero.scss";
 import ScreenVideo from "./screenVideo";
 import AnimatedServices from "./AnimatedServices";
 import Test from "./Test";
-import { useColor } from "../context/ColorContext"; // Import the theme
+import { useColor } from "../context/ColorContext";
 
 const Hero = () => {
-  const { theme } = useColor(); // Get the global theme
+  const { theme } = useColor();
 
   return (
-    <div 
+    <div
       className="hero1-main"
       style={{
-        backgroundColor: theme.backgroundColor, // Apply theme background
-        color: theme.primaryColor, // Apply theme text color
+        backgroundColor: theme.backgroundColor,
+        color: theme.primaryColor,
+        borderColor: theme.primaryColor,
+        boxShadow: `0 0 10px ${theme.primaryColor}`,
         transition: "background-color 0.3s ease, color 0.3s ease",
       }}
     >
-      <div className="hero1-1" style={{ backgroundColor: theme.backgroundColor }}>
-        <div className="hero1-1-1">
-          <p style={{ color: theme.primaryColor  }}> MELLOW&nbsp;&nbsp;YELLOW </p>
+      <div
+        className="hero1-1"
+        style={{ backgroundColor: theme.backgroundColor }}
+      >
+        <div
+          className="hero1-1-1"
+          style={{ color: theme.primaryColor, borderColor: theme.primaryColor }}
+        >
+          <p>MELLOW&nbsp;&nbsp;YELLOW </p>
         </div>
-        <div className="hero1-1-2">
-          <div className="hero1-1-2-1">
+        <div className="hero1-1-2" style={{ borderColor: theme.primaryColor }}>
+          <div
+            className="hero1-1-2-1"
+            style={{ borderColor: theme.primaryColor }}
+          >
             <ul>
               <li style={{ color: theme.primaryColor }}>◉ SEASONS </li>
               <li style={{ color: theme.primaryColor }}>◉ DESIGNS </li>
               <li style={{ color: theme.primaryColor }}>◉ TYPOGRAPHY </li>
             </ul>
           </div>
-          <div 
-            className="hero1-1-2-2"
-          ></div>
+          <div className="hero1-1-2-2"></div>
         </div>
       </div>
 
-      <div className="hero1-3">
-        <div className="hero1-3-1"style={{ backgroundColor: theme.secondaryColor }} >
-          <div 
-            className="hero1-3-1-1"
-          ></div>
+      <div className="hero1-3" style={{ borderColor: theme.primaryColor }}>
+        <div
+          className="hero1-3-1"
+          style={{
+            backgroundColor: theme.secondaryColor,
+            borderColor: theme.primaryColor,
+          }}
+        >
+          <div className="hero1-3-1-1"></div>
           <div className="test-container">
             <Test />
           </div>
         </div>
 
-        <div className="hero1-3-2" style={{ backgroundColor: theme.secondaryColor }}>
+        <div
+          className="hero1-3-2"
+          style={{
+            backgroundColor: theme.secondaryColor,
+            borderColor: theme.primaryColor,
+          }}
+        >
           <div className="hero1-3-2-1">
             <AnimatedServices />
           </div>
-          <div className="hero1-3-2-2">
+          <div
+            className="hero1-3-2-2"
+            style={{ border: `1px solid {theme.backgroundColor}` }}
+          >
             <ScreenVideo />
           </div>
         </div>
