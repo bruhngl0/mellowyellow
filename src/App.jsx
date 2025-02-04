@@ -91,9 +91,9 @@ export const themes = [
     backgroundColor: "#f2e3d8",
   },
   {
-    primaryColor: "#000",
-    secondaryColor: "#fdc614",
-    backgroundColor: "#3b4fa2",
+    primaryColor: "#ff0000",
+    secondaryColor: "#000",
+    backgroundColor: "#000",
   },
   {
     primaryColor: "#fff",
@@ -101,19 +101,19 @@ export const themes = [
     backgroundColor: "#f7cc47",
   },
   {
-    primaryColor: "#f7cc47",
-    secondaryColor: "#f1b3d1",
-    backgroundColor: "#f8b527",
+    primaryColor: "#995682",
+    secondaryColor: "#d8c5e0",
+    backgroundColor: "#d8c5e0",
   },
   {
-    primaryColor: "#000",
-    secondaryColor: "pink",
-    backgroundColor: "hotpink",
+    
+    primaryColor: "#354d90",
+    backgroundColor: "#fff",
   },
   {
-    primaryColor: "#fff",
-    secondaryColor: "#914148",
-    backgroundColor: "#f9e5ce",
+    primaryColor: "#df9229",
+    secondaryColor: "#f9e5ce",
+    backgroundColor: "#914148",
   },
 ];
 
