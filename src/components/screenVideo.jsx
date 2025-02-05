@@ -4,17 +4,17 @@ import Header from './Header';
 
 const ScreenVideo = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [videoSrc, setVideoSrc] = useState('love.mp4');
+  const [videoSrc, setVideoSrc] = useState('video_1.mp4');
 
   useEffect(() => {
     // Function to handle window resize
     const handleResize = () => {
       if (window.innerWidth <= 768) {
         setIsMobile(true);
-        setVideoSrc('studio.mp4'); // Your mobile video filename
+        setVideoSrc('video_1.mp4'); // Your mobile video filename
       } else {
         setIsMobile(false);
-        setVideoSrc('studio.mp4');
+        setVideoSrc('video_1.mp4');
       }
     };
 

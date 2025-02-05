@@ -7,13 +7,15 @@ import AnimatedServices from "./AnimatedServices";
 import Test from "./Test";
 import "../styles/layout.scss";
 import "../styles/noise-overlay.scss";
+import Services from "./Services";
 const Layout = () => {
   return (
     <div className="noise-overlay">
       <div className="layout-main">
         <Hero />
+        <Services />
         <ScreenSix />
-        <Footer />
+      
       </div>
     </div>
   );

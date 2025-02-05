@@ -16,7 +16,7 @@ const Hero = () => {
         backgroundColor: theme.backgroundColor,
         color: theme.primaryColor,
        
-        boxShadow: `0 0 10px ${theme.primaryColor}`,
+       
         transition: "background-color 0.3s ease, color 0.3s ease",
       }}
     >
