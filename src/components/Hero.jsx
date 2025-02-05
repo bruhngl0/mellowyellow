@@ -15,7 +15,7 @@ const Hero = () => {
       style={{
         backgroundColor: theme.backgroundColor,
         color: theme.primaryColor,
-        borderColor: theme.primaryColor,
+       
         boxShadow: `0 0 10px ${theme.primaryColor}`,
         transition: "background-color 0.3s ease, color 0.3s ease",
       }}
@@ -26,14 +26,14 @@ const Hero = () => {
       >
         <div
           className="hero1-1-1"
-          style={{ color: theme.primaryColor, borderColor: theme.primaryColor }}
+          style={{ color: theme.primaryColor, }}
         >
           <p>MELLOW&nbsp;&nbsp;YELLOW </p>
         </div>
-        <div className="hero1-1-2" style={{ borderColor: theme.primaryColor }}>
+        <div className="hero1-1-2" style={{  }}>
           <div
             className="hero1-1-2-1"
-            style={{ borderColor: theme.primaryColor }}
+            style={{  }}
           >
             <ul>
               <li style={{ color: theme.primaryColor }}>◉ SEASONS </li>
@@ -45,12 +45,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero1-3" style={{ borderColor: theme.primaryColor }}>
+      <div className="hero1-3" style={{ }}>
         <div
           className="hero1-3-1"
           style={{
             backgroundColor: theme.secondaryColor,
-            borderColor: theme.primaryColor,
+          
           }}
         >
           <div className="hero1-3-1-1"></div>
@@ -63,7 +63,7 @@ const Hero = () => {
           className="hero1-3-2"
           style={{
             backgroundColor: theme.secondaryColor,
-            borderColor: theme.primaryColor,
+            
           }}
         >
           <div className="hero1-3-2-1">

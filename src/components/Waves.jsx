@@ -221,7 +221,7 @@ const Waves = () => {
   }, [setSize, initLines, updateMousePosition, tick]);
 
   return (
-    <div ref={containerRef} className="waves" style={{ stroke: theme.primaryColor, backgroundColor: theme.backgroundColor }}>
+    <div ref={containerRef} className="waves" style={{ stroke: theme.backgroundColor }}>
       <svg ref={svgRef} className="waves__svg"></svg>
     </div>
   );
