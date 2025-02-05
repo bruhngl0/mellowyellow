@@ -82,13 +82,15 @@ const clientsData = {
 export const themes = [
   {
     primaryColor: "#fff",
+    secondaryColor: "black",
+    backgroundColor: "black",
     secondaryColor: "#3c3a3a",
     backgroundColor: "#000",
   },
   {
-    primaryColor: "#f48f23",
-    secondaryColor: "#dacdde",
-    backgroundColor: "#f2e3d8",
+    primaryColor: "#fff", // Dodger Blue
+    secondaryColor: "#000", // Tomato Red
+    backgroundColor: "#ff0000", // Deep Black
   },
   {
     primaryColor: "#ff0000",
@@ -101,19 +103,19 @@ export const themes = [
     backgroundColor: "#f7cc47",
   },
   {
-    primaryColor: "#995682",
-    secondaryColor: "#d8c5e0",
-    backgroundColor: "#d8c5e0",
+    primaryColor: "#fff", // Vibrant Orange
+    secondaryColor: "#000", // Fresh Green
+    backgroundColor: "purple", // Light Gray
   },
   {
-    
-    primaryColor: "#354d90",
-    backgroundColor: "#fff",
+    primaryColor: "#fff", // Strong Blue
+    secondaryColor: "#000", // Pink Magenta
+    backgroundColor: "pink", // Pure White
   },
   {
-    primaryColor: "#df9229",
-    secondaryColor: "#f9e5ce",
-    backgroundColor: "#914148",
+    primaryColor: "#fff", // Deep Purple
+    secondaryColor: "#000", // Warm Orange
+    backgroundColor: "brown", // Soft White
   },
 ];
 

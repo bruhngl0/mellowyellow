@@ -22,9 +22,9 @@ const Test = () => {
        
       </div>
       <div className="content" style={{ backgroundColor: theme.secondaryColor }}>
-        <div className="latest-fonts">
+        <div className="latest-fonts" style={{backgroundColor: theme.secondaryColor}}>
           <h3>Latest font inclusions</h3>
-          <p>
+          <p style={{color: theme.primarycolor}}>
             December 2023 - 34 typefaces curated by P.A. Malley. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
             December 2023 - 34 typefaces curated by P.A. Malley. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
             December 2023 - 34 typefaces curated by P.A. Malley. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.
