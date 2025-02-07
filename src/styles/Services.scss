@@ -1,15 +1,35 @@
+@font-face {
+    font-family: "boyer";
+    src: url("../../public//boyer.otf") format("open-type");
+    font-weight: normal;
+    font-style: normal;
+  }
+
 .services-main{
-   
+  
     width: 98vw;
-    height: 200vh;
-    font-size: 8rem;
-   
-    letter-spacing: -0.05em;
-    font-family: cursive;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.serices.content{
-   >p{
-    font-family: monospace;
-   }
+
+.services-content{
+
+
+    width: 100%;
+    font-size: 6.5rem;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    margin-top: 10rem;
+
+  
+
+    >p{
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
 }
+

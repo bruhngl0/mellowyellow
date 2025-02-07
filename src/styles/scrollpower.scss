@@ -1,0 +1,66 @@
+
+@font-face {
+    font-family: "boyer";
+    src: url("../../public/boyer.otf") format("open-type");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .scrollpower-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  
+    height: auto;
+    margin-top: 5rem;
+    
+  }
+  
+  
+  .about-container-scrollpower {
+      
+      .about-inner-scrollpower {
+        background-color: rgb(255, 255, 255);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+      
+        gap: 0rem;
+        margin-top: 00rem;
+        justify-content: flex-end;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-image: url("../../public/servicesbg.png");
+        background-size: cover;
+        box-shadow: 0 0 15px rgba(8, 8, 8, 0.8);
+        
+      } 
+    }
+
+    .scrollPower-p{
+        
+        width: 100%;
+        font-size: 15rem;
+        font-weight: 900;
+        letter-spacing: -0.1em;
+    
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin: 0 auto;
+    }
+      
+    .scrollPower-mini{
+        padding-left: 2rem;
+        font-size: 18px;
+        width: 70%;
+        margin-bottom: 4rem;
+    }
+   
+  
+   
+  
+   
