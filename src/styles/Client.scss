@@ -1,25 +1,39 @@
+@font-face {
+  font-family: "boyer";
+  src: url("../../public/boyer.otf") format("open-type");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 .container {
   display: flex;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: self-start;
 
   .slider-section {
+   
     width: 100%;
-    height: 100%;
+    height: 60%;
     position: relative;
     overflow: hidden;
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       position: absolute;
       top: 0;
       left: 0;
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
-
+   
       &.active {
         opacity: 1;
       }
@@ -126,4 +140,26 @@
       }
     }
   }
+}
+
+.overlay-text-client{
+  position: fixed;
+bottom: 0px;
+left: 50%;
+transform: translateX(-50%);
+z-index: 1000;
+color: '#fff';
+font-size: 350px;
+font-weight: 400;
+text-align: center;
+font-family: helvetica;
+letter-spacing: -0.08em;
+
+width: 100%;
+margin-block-end: 0;
+margin-block-start: 0;
+margin-inline-start: 0;
+margin-inline-end: 0;
+margin: 0 auto;
+line-height: 0.8;
 }

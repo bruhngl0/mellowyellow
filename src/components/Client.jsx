@@ -4,12 +4,14 @@ import { CustomEase } from "gsap/CustomEase";
 import "../styles/Client.scss";
 import { useNavigate } from "react-router-dom";
 gsap.registerPlugin(CustomEase);
+import { useColor } from "../context/ColorContext";
 
 import { IoArrowBack } from "react-icons/io5";
 import { IoArrowForward } from "react-icons/io5";
 import { TiHomeOutline } from "react-icons/ti";
 
 const Client = ({ images, content }) => {
+  const { theme } = useColor();
   const sliderRef = useRef(null);
   const titleRef = useRef(null);
   const servicesRefs = useRef([]);
@@ -90,6 +92,11 @@ const Client = ({ images, content }) => {
 
   return (
     <div className="container">
+      <div className="overlay-text-client" style={{
+       color: theme.backgroundColor,
+      }}>
+        KOK-2024
+      </div>
       <div ref={sliderRef} className="slider-section">
         {images.map((img, index) => (
           <img
@@ -103,92 +110,10 @@ const Client = ({ images, content }) => {
       <div className="content-section">
         <div className="top-section">
           <h1 ref={titleRef} className="title">
-            {content.title}
+            
           </h1>
         </div>
-        <div className="bottom-section">
-          <div className="left">
-            <p ref={descriptionRef} className="description">
-              {content.description}
-            </p>
-          </div>
-          <div className="right">
-            <div className="right-grid">
-              {content.services.split(", ").map((service, index) => (
-                <div key={index} className="right-grid-item">
-                  <p
-                    ref={(el) => (servicesRefs.current[index] = el)}
-                    className="service"
-                  >
-                    {service}
-                  </p>
-                </div>
-              ))}
-              <div className="right-grid-item">
-                <h3 ref={yearRef} className="year">
-                  Year: {content.year}
-                </h3>
-              </div>
-              <div className="right-grid-item">
-                <div ref={navigationRef} className="navigation-section">
-                  <button className="home-button" onClick={() => navigate("/")}>
-                    <TiHomeOutline size={40} />
-                  </button>
-                  <button
-                    className="back-button"
-                    onClick={() => {
-                      const currentPath = window.location.pathname;
-                      const currentNumber = parseInt(currentPath.split("-")[1]);
-                      if (currentNumber > 1) {
-                        navigate(`/client-${currentNumber - 1}`);
-                      }
-                    }}
-                    disabled={
-                      parseInt(window.location.pathname.split("-")[1]) === 1
-                    }
-                    style={{
-                      opacity:
-                        parseInt(window.location.pathname.split("-")[1]) === 1
-                          ? 0.5
-                          : 1,
-                      cursor:
-                        parseInt(window.location.pathname.split("-")[1]) === 1
-                          ? "not-allowed"
-                          : "pointer",
-                    }}
-                  >
-                    <IoArrowBack size={40} />
-                  </button>
-                  <button
-                    className="next-button"
-                    onClick={() => {
-                      const currentPath = window.location.pathname;
-                      const currentNumber = parseInt(currentPath.split("-")[1]);
-                      if (currentNumber < 6) {
-                        navigate(`/client-${currentNumber + 1}`);
-                      }
-                    }}
-                    disabled={
-                      parseInt(window.location.pathname.split("-")[1]) === 6
-                    }
-                    style={{
-                      opacity:
-                        parseInt(window.location.pathname.split("-")[1]) === 6
-                          ? 0.5
-                          : 1,
-                      cursor:
-                        parseInt(window.location.pathname.split("-")[1]) === 6
-                          ? "not-allowed"
-                          : "pointer",
-                    }}
-                  >
-                    <IoArrowForward size={40} />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   );
