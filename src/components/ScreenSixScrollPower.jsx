@@ -1,0 +1,142 @@
+import React, { useState, useEffect, useRef, memo } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useColor } from "../context/ColorContext";
+
+import image1 from "../../public/mellow1.png";
+import image2 from "../../public/mellow2.png";
+import image3 from "../../public/mellow3.png";
+import image4 from "../../public/mellow4.png";
+import image5 from "../../public/mellow5.png";
+import image6 from "../../public/mellow6.png";
+
+import "../styles/ScreenSixScrollPower.scss"; // Merged SCSS file
+
+gsap.registerPlugin(ScrollTrigger);
+
+const ANIMATION_CONFIG = {
+  TRIGGER_START: "top 80%",
+  TRIGGER_END: "center center",
+  SCRUB_FACTOR: 2,
+  INITIAL_STATE: { width: "0vw", height: "0vh", opacity: 0, scale: 0.8 },
+  FINAL_STATE: {
+    width: "98vw",
+    height: "100vh",
+    opacity: 1,
+    scale: 1,
+    duration: 2,
+    ease: "power2.out",
+  },
+};
+
+const ScreenSixScrollPower = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const { theme } = useColor();
+  const nav = useNavigate();
+
+  // Refs for GSAP animations
+  const refs = {
+    container: useRef(null),
+    innerDiv: useRef(null),
+    animatedServices: useRef(null),
+    layout: useRef(null),
+  };
+
+  useEffect(() => {
+    const { container, innerDiv, animatedServices, layout } = refs;
+
+    gsap.set(innerDiv.current, ANIMATION_CONFIG.INITIAL_STATE);
+    gsap.set(animatedServices.current, { opacity: 0 });
+    gsap.set(layout.current, { opacity: 0 });
+
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: container.current,
+      start: ANIMATION_CONFIG.TRIGGER_START,
+      end: ANIMATION_CONFIG.TRIGGER_END,
+      scrub: ANIMATION_CONFIG.SCRUB_FACTOR,
+      markers: false,
+      smoothTouch: true,
+    });
+
+    const timeline = gsap.timeline({
+      scrollTrigger,
+      defaults: { ease: "power1.inOut" },
+    });
+    timeline
+      .to(innerDiv.current, ANIMATION_CONFIG.FINAL_STATE)
+      .to(layout.current, { opacity: 1, duration: 1 }, "-=0.5")
+      .to(animatedServices.current, { opacity: 1, duration: 2 }, "-=0.3");
+
+    return () => {
+      scrollTrigger.kill();
+      timeline.kill();
+    };
+  }, []);
+
+  const items = [
+    { image: image1, text: "PLANTERS", id: 1, route: "/client-1" },
+    { image: image2, text: "DESK PLANTERS", id: 2, route: "/client-2" },
+    { image: image3, text: "TABLES", id: 3, route: "/client-3" },
+    { image: image4, text: "BREEZE BLOCKS", id: 4, route: "/client-4" },
+    { image: image5, text: "WALL CLADDING", id: 5, route: "/client-5" },
+    { image: image6, text: "SCULPTURES", id: 6, route: "/client-6" },
+  ];
+
+  return (
+    <>
+      <section className="scrollpower">
+        {/* Scroll Animation Section */}
+        <div className="scrollpower-main">
+          <div ref={refs.container} className="about-container-scrollpower">
+            <div ref={refs.innerDiv} className="about-inner-scrollpower">
+              <p
+                className="scrollPower-p"
+                style={{ color: theme.backgroundColor }}
+              >
+                abcd
+              </p>
+              <p className="scrollPower-mini">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                consequuntur, suscipit sint reiciendis blanditiis, atque fugiat
+                corporis tempora impedit maxime odit quae? Doloremque nemo
+                itaque molestiae voluptas perspiciatis veniam excepturi?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="new"></section>
+      <section className="screen-six">
+        <div className="supreme-container">
+          <div className="supreme-grid">
+            {items.map((item, index) => (
+              <div
+                key={item.id}
+                className={`grid-item ${
+                  hoveredIndex === index ? "hovered" : ""
+                } ${
+                  hoveredIndex !== null && hoveredIndex !== index ? "blur" : ""
+                }`}
+                style={{ backgroundImage: `url(${item.image})` }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => nav(item.route)}
+              >
+                <Link to={item.route}>
+                  <span className="item-text">{item.text}</span>
+                  <span className="item-new">New</span>
+                </Link>
+              </div>
+            ))}
+          </div>
+          <Link to="/">
+            <button className="screen-six-btn">← BACK</button>
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default memo(ScreenSixScrollPower);

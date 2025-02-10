@@ -1,0 +1,125 @@
+.scrollpower {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 160vh;
+
+  .scrollpower-main {
+    width: 100%;
+    // padding: 2rem 0;
+  }
+
+  .about-container-scrollpower {
+    .about-inner-scrollpower {
+      background-color: rgb(255, 255, 255);
+      background-image: url("../../public/servicesbg.png");
+      background-size: cover;
+      box-shadow: 0 0 15px rgba(8, 8, 8, 0.8);
+    }
+  }
+
+  .scrollPower-p {
+    width: 100%;
+    font-size: 15rem;
+    font-weight: 900;
+    letter-spacing: -0.1em;
+    text-align: center;
+  }
+
+  .scrollPower-mini {
+    padding-left: 2rem;
+    font-size: 18px;
+    width: 70%;
+    margin-bottom: 10rem;
+  }
+}
+
+.screen-six {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+
+  .supreme-container {
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding: 10rem 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+
+    .supreme-grid {
+      display: flex;
+      justify-content: space-between;
+      height: 500px;
+      width: 80vw;
+
+      .grid-item {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        z-index: 1;
+        margin: 4px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-size: cover;
+
+        &.hovered {
+          flex: 3;
+          z-index: 2;
+          transform: scale(1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3),
+            0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        &.blur {
+          filter: blur(3px);
+        }
+
+        .item-text {
+          position: absolute;
+          bottom: 5px;
+          left: 5px;
+          color: white;
+          font-size: 12px;
+        }
+
+        .item-new {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          padding: 2px 5px;
+          font-size: 10px;
+        }
+      }
+    }
+
+    .screen-six-btn {
+      color: white;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.new {
+  height: 100vh;
+  background-color: #fff;
+  width: 100%;
+}
+
+.scrollpower,
+.new,
+.screen-six {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}

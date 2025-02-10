@@ -99,8 +99,8 @@ const ScrollPower = () => {
   }, []); // Empty dependency array since we're only using refs
 
   return (
+    <section className="scrollpower-section">
     <div className='scrollpower-main'> 
-      
       <div ref={refs.container} className="about-container-scrollpower">
       <div ref={refs.innerDiv} className="about-inner-scrollpower" aria-hidden="true">
         <p className= "scrollPower-p"style={{color: theme.backgroundColor}}>
@@ -112,6 +112,7 @@ const ScrollPower = () => {
       </div>
     </div>
     </div>
+    </section>
   );
 };
 
