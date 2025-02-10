@@ -1,0 +1,65 @@
+.scroll-container-works {
+  display: flex;
+  height: 100vh;
+  overflow: hidden; // Change to hidden
+  position: relative;
+}
+
+.left-section-works {
+  width: 30%;
+  position: fixed; // Fix the thumbnails
+  left: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  z-index: 2;
+
+  .thumbnail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; // Increase gap between thumbnails
+  }
+
+  img {
+    width: 100px; // Larger thumbnails
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+
+    &.active {
+      transform: scale(1.1);
+      border: 2px solid #007bff;
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.right-section-works {
+  width: 70%;
+  margin-left: 30%; // Offset for fixed left section
+  height: 100vh;
+  overflow-y: auto; // Enable scroll on content
+  scroll-behavior: smooth;
+  padding: 40px;
+
+  .content-box-works {
+    min-height: 100vh; // Full height sections
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: white;
+    padding: 40px;
+    border-radius: 5px;
+    margin-bottom: 20vh; // Space between sections
+  }
+}
+  

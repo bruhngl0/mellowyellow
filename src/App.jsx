@@ -11,6 +11,7 @@ import AnimatedServices from "./components/AnimatedServices";
 import Client from "./components/Client";
 import FloatingDock from "./components/FloatingDock";
 import Services from "./components/Services";
+import Works from "./components/Works";
 
 import image1 from "../public/mellow1.png";
 import image3 from "../public/mellow3.png";
@@ -135,6 +136,7 @@ const App = () => {
           <Route path="client-5" element={<Client {...clientsData.client5} />} />
           <Route path="client-6" element={<Client {...clientsData.client6} />} />
           <Route path="services" element={<Services />} />
+          <Route path="works" element={<Works />} />
         </Routes>
       </ColorProvider>
     </Router>
