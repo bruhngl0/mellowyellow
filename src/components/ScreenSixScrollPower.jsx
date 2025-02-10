@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useColor } from "../context/ColorContext";
+import Services from "./Services";
 
 import image1 from "../../public/mellow1.png";
 import image2 from "../../public/mellow2.png";
@@ -85,6 +86,7 @@ const ScreenSixScrollPower = () => {
 
   return (
     <>
+    <Services />
       <section className="scrollpower">
         {/* Scroll Animation Section */}
         <div className="scrollpower-main">
@@ -106,7 +108,9 @@ const ScreenSixScrollPower = () => {
           </div>
         </div>
       </section>
-      <section className="new"></section>
+      <section className="new">
+        <h1>LOL</h1>
+      </section>
       <section className="screen-six">
         <div className="supreme-container">
           <div className="supreme-grid">
