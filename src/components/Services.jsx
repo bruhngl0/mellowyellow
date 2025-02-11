@@ -11,7 +11,7 @@ const Services = () => {
       <div className="services-content">
       
         <p style={{color: theme.backgroundColor}}>  CHOOSE LOVE  CHOOSE FREEDOM <br/> <br/> CHOOSE US!</p>
-        <RevealOnScroll />
+       
       </div>
     </div>
   );

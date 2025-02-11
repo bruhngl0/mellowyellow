@@ -34,8 +34,8 @@ const Fancy = () => {
   }, []);
   
   // Transform values for left and right sliding divs
-  const leftSlide = useTransform(scrollY, [0, 1500], [0, 100]);
-  const rightSlide = useTransform(scrollY, [0, 1500], [0, -100]);
+  const leftSlide = useTransform(scrollY, [0, 2500], [0, 200]);
+  const rightSlide = useTransform(scrollY, [0, 2500], [0, -200]);
 
   return (
 

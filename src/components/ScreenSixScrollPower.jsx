@@ -115,34 +115,7 @@ const ScreenSixScrollPower = () => {
       <ScrollComponent />
       
       </section>
-      <section className="screen-six">
-        <div className="supreme-container">
-          <div className="supreme-grid">
-            {items.map((item, index) => (
-              <div
-                key={item.id}
-                className={`grid-item ${
-                  hoveredIndex === index ? "hovered" : ""
-                } ${
-                  hoveredIndex !== null && hoveredIndex !== index ? "blur" : ""
-                }`}
-                style={{ backgroundImage: `url(${item.image})` }}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                onClick={() => nav(item.route)}
-              >
-                <Link to={item.route}>
-                  <span className="item-text">{item.text}</span>
-                  <span className="item-new">New</span>
-                </Link>
-              </div>
-            ))}
-          </div>
-          <Link to="/">
-            <button className="screen-six-btn">← BACK</button>
-          </Link>
-        </div>
-      </section>
+     
     </>
   );
 };

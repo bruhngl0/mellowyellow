@@ -58,51 +58,107 @@ const data = [
     description: "Description 6",
     content: content_6,
   },
+
+  {
+    id: 7,
+    thumbnail: thumbnail_4,
+    title: "Title 4",
+    description: "Description 4",
+    content: content_4,
+  },
+  {
+    id: 8,
+    thumbnail: thumbnail_5,
+    title: "Title 5",
+    description: "Description 5",
+    content: content_5,
+  },
+  {
+    id: 9,
+    thumbnail: thumbnail_6,
+    title: "Title 6",
+    description: "Description 6",
+    content: content_6,
+  },
 ];
 
 const ScrollComponent = () => {
-  const [items, setItems] = useState([...data, ...data]);
-  const [activeIndex, setActiveIndex] = useState(0);
   const [selectedItem, setSelectedItem] = useState(data[0]);
-  const scrollRef = useRef(null);
-  const scrollAmount = 120;
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [currentPosition, setCurrentPosition] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(true);
+  
+  const ITEM_HEIGHT = 210; // 200px height + 10px margin
+  const TRIGGER_POINT = 400; // Invisible trigger point
+
+  const doubleData = [...data, ...data];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (listRef.current) {
-        listRef.current.scrollTop += scrollAmount;
+    let intervalId;
 
-        if (listRef.current.scrollTop >= listRef.current.scrollHeight / 2) {
-          listRef.current.scrollTop = 0;
-        }
-      }
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if (scrollRef.current) {
-      const activeThumbnail = scrollRef.current.children[activeIndex];
-      if (activeThumbnail) {
-        activeThumbnail.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
+    if (isAnimating) {
+      intervalId = setInterval(() => {
+        setCurrentPosition(prev => {
+          const totalItems = data.length;
+          const nextPosition = prev + ITEM_HEIGHT;
+          
+          if (nextPosition >= totalItems * ITEM_HEIGHT) {
+            return 0;
+          }
+          return nextPosition;
+        });
+      }, 2000);
     }
-  }, [activeIndex]);
+
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+  }, [isAnimating]);
+
+  useEffect(() => {
+    const triggerIndex = Math.floor(currentPosition / ITEM_HEIGHT);
+    const actualIndex = triggerIndex % data.length;
+    
+    setSelectedItem(data[actualIndex]);
+    setActiveIndex(actualIndex);
+  }, [currentPosition]);
+
+  const handleMouseEnter = (item, index) => {
+    setIsAnimating(false);
+    setSelectedItem(item);
+    setActiveIndex(index % data.length);
+  };
+
+  const handleMouseLeave = () => {
+    setIsAnimating(true);
+  };
 
   return (
     <div className="container-scroll">
-      <div className="left-section-scroll">
+      <div 
+        className="left-section-scroll" 
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="inner-container-scroll">
-          {data.map((item, index) => (
-            <div
-              key={item.id}
-              className={`thumbnail-scroll ${item.id === activeIndex ? "active" : ""}`}
-              onMouseOver={() => setSelectedItem(item)}
-            >
-              <img src={item.thumbnail} alt={item.title} />
-            </div>
-          ))}
+          <div 
+            className="scroll-content"
+            style={{
+              transform: `translateY(-${currentPosition}px)`,
+              transition: 'transform 0.5s ease-in-out'
+            }}
+          >
+            {doubleData.map((item, index) => (
+              <div
+                key={`${item.id}-${index}`}
+                className={`thumbnail-scroll ${index % data.length === activeIndex ? "active" : ""}`}
+                onMouseEnter={() => handleMouseEnter(item, index)}
+              >
+                <img src={item.thumbnail} alt={item.title} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="right-section-scroll">
