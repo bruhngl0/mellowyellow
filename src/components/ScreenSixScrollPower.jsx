@@ -13,6 +13,7 @@ import image5 from "../../public/mellow5.png";
 import image6 from "../../public/mellow6.png";
 
 import "../styles/ScreenSixScrollPower.scss"; // Merged SCSS file
+import Fancy from "./Fancy";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -109,7 +110,8 @@ const ScreenSixScrollPower = () => {
         </div>
       </section>
       <section className="new">
-        <h1>LOL</h1>
+        
+      <h1>proper</h1>
       </section>
       <section className="screen-six">
         <div className="supreme-container">

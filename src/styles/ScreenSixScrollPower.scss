@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 160vh;
+  height: 100vh;
 
   .scrollpower-main {
     width: 100%;
@@ -118,6 +118,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
     h1 {
         font-size: 7rem;

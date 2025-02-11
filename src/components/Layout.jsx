@@ -5,6 +5,8 @@ import "../styles/layout.scss";
 import "../styles/noise-overlay.scss";
 import Services from "./Services";
 import ScreenSixScrollPower from "./ScreenSixScrollPower";
+import Fancy from "./Fancy";
+import Dual from "./Dual";
 const Layout = () => {
   return (
     <div className="noise-overlay">
@@ -12,8 +14,10 @@ const Layout = () => {
         <Hero />
         {/* <Services />
         <ScreenSix /> */}
-
+           <Dual />
         <ScreenSixScrollPower />
+     
+       
 
 
       </div>
