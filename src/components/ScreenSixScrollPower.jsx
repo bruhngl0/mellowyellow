@@ -15,6 +15,8 @@ import image6 from "../../public/mellow6.png";
 import "../styles/ScreenSixScrollPower.scss"; // Merged SCSS file
 import Fancy from "./Fancy";
 
+import ScrollComponent from "./ScrollComponent";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const ANIMATION_CONFIG = {
@@ -110,8 +112,8 @@ const ScreenSixScrollPower = () => {
         </div>
       </section>
       <section className="new">
-        
-      <h1>proper</h1>
+      <ScrollComponent />
+      
       </section>
       <section className="screen-six">
         <div className="supreme-container">
