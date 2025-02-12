@@ -17,6 +17,7 @@ import Fancy from "./Fancy";
 
 import ScrollComponent from "./ScrollComponent";
 import { color } from "framer-motion";
+import Paper from "./Paper";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -113,7 +114,7 @@ const ScreenSixScrollPower = () => {
         </div>
       </section>
       <section className="new" style={{backgroundColor: theme.backgroundColor}}>
-      proper
+       <Paper />
       
       </section>
 

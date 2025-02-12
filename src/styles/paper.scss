@@ -1,0 +1,26 @@
+.container-paper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+  background-color: #f5f5f5;
+}
+
+.wrapper-paper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-paper {
+ 
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+}

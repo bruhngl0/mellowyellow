@@ -9,6 +9,7 @@ import Fancy from "./Fancy";
 import Dual from "./Dual";
 import ScrollComponent from "./ScrollComponent";
 import RevealOnScroll from "./RevealOnScroll";
+import Paper from "./Paper";
 const Layout = () => {
   return (
     <div className="noise-overlay">
@@ -17,6 +18,7 @@ const Layout = () => {
      <Services />
         {/* <Services />
         <ScreenSix /> */}
+      
            <Dual />
            <RevealOnScroll />
            <ScreenSixScrollPower />
