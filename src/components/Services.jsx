@@ -10,7 +10,7 @@ const Services = () => {
     <div className="services-main" style={{ backgroundColor: theme.secondaryColor }}>
       <div className="services-content">
       
-        <p style={{color: theme.backgroundColor}}>  CHOOSE LOVE  CHOOSE FREEDOM <br/> <br/> CHOOSE US!</p>
+        <p style={{color: theme.backgroundColor}}>  CHOOSE LOVE  CHOOSE FREEDOM <br/> <br/>CHOOSE US!</p>
        
       </div>
     </div>

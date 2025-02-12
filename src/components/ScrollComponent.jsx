@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../styles/ScrollComponent.scss";
-
+import { useColor } from "../context/ColorContext";
 // Thumbnail Images (640x800)
 import thumbnail_1 from "../assets/ScrollComponent/thumbnail-1.jpg";
 import thumbnail_2 from "../assets/ScrollComponent/thumbnail-2.jpg";
@@ -14,75 +14,78 @@ import content_3 from "../assets/ScrollComponent/content-3.jpg";
 import content_4 from "../assets/ScrollComponent/content-4.jpg";
 import content_5 from "../assets/ScrollComponent/content-5.jpg";
 import content_6 from "../assets/ScrollComponent/content-6.jpg";
+import { color } from "framer-motion";
 
 const data = [
   {
     id: 1,
     thumbnail: thumbnail_1,
-    title: "Title 1",
-    description: "Description 1",
+    title: "Title1",
+    description: "Description1",
     content: content_1,
   },
   {
     id: 2,
     thumbnail: thumbnail_2,
-    title: "Title 2",
-    description: "Description 2",
+    title: "Title2",
+    description: "Description2",
     content: content_2,
   },
   {
     id: 3,
     thumbnail: thumbnail_3,
-    title: "Title 3",
-    description: "Description 3",
+    title: "Title3",
+    description: "Description3",
     content: content_3,
   },
   {
     id: 4,
     thumbnail: thumbnail_4,
-    title: "Title 4",
-    description: "Description 4",
+    title: "Title4",
+    description: "Description4",
     content: content_4,
   },
   {
     id: 5,
     thumbnail: thumbnail_5,
-    title: "Title 5",
-    description: "Description 5",
+    title: "Title5",
+    description: "Description5",
     content: content_5,
   },
   {
     id: 6,
     thumbnail: thumbnail_6,
-    title: "Title 6",
-    description: "Description 6",
+    title: "Title6",
+    description: "Description6",
     content: content_6,
   },
 
   {
     id: 7,
     thumbnail: thumbnail_4,
-    title: "Title 4",
-    description: "Description 4",
+    title: "Title4",
+    description: "Description4",
     content: content_4,
   },
   {
     id: 8,
     thumbnail: thumbnail_5,
-    title: "Title 5",
-    description: "Description 5",
+    title: "Title5",
+    description: "Description5",
     content: content_5,
   },
   {
     id: 9,
     thumbnail: thumbnail_6,
-    title: "Title 6",
-    description: "Description 6",
+    title: "Title6",
+    description: "Description6",
     content: content_6,
   },
 ];
 
 const ScrollComponent = () => {
+
+  const { theme } = useColor();
   const [selectedItem, setSelectedItem] = useState(data[0]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentPosition, setCurrentPosition] = useState(0);
@@ -163,8 +166,16 @@ const ScrollComponent = () => {
       </div>
       <div className="right-section-scroll">
         <div className="right-section-top-scroll">
-          <h1>{selectedItem.title}</h1>
-          <p>{selectedItem.description}</p>
+          <p style={{color: theme.backgroundColor}}>{selectedItem.title}</p>
+          <p style={{color: theme.backgroundColor}}>{selectedItem.description}</p>
+          <p style={{color: theme.backgroundColor}}>Globally recognized Independent Designer and Creative Director
+based in the Netherlands. Working at the intersection of design, art,
+and photography with a host of international clients that includes
+Getty Institute, Adobe, Meta, Adidas, Bill Gates Ventures, VanMoof,
+Lexus, Toyota, Samsung, ECCO, and more.<br/><br/><br/><br/><br/>mellowyellow@gmail.com</p>
+
+      <p style={{color: theme.backgroundColor}}>IST:2:30pm</p>
+
         </div>
         <div className="right-section-bottom-scroll">
           <img
