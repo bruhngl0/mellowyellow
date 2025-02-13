@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "re";
+  src: url("re.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
 .scrollpower {
   display: flex;
   flex-direction: column;
@@ -110,7 +120,7 @@
 }
 
 .new {
-  height: 400vh;
+  height: 100vh;
   background-color: #fff;
   color: #000;
   width: 100%;
@@ -119,11 +129,20 @@
   justify-content: start;
   align-items: center;
   overflow: hidden;
+  background-image: url("../../public/rename.png");
+  background-size: cover;
+
+  
+  
 
     h1 {
         font-size: 7rem;
         font-weight: 900;
         text-align: center;
+    }
+
+    p{
+      font-family: re;
     }
 }
 

@@ -22,8 +22,8 @@ const ANIMATION_CONFIG = {
     height: '100vh',
     opacity: 1,
     scale: 1,
-    duration: 2,
-    ease: "power2.out"
+    duration: 10,
+    ease: "power4.inOut"
   }
 };
 

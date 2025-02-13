@@ -17,22 +17,22 @@ import Fancy from "./Fancy";
 
 import ScrollComponent from "./ScrollComponent";
 import { color } from "framer-motion";
-import Paper from "./Paper";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ANIMATION_CONFIG = {
   TRIGGER_START: "top 80%",
   TRIGGER_END: "center center",
-  SCRUB_FACTOR: 2,
-  INITIAL_STATE: { width: "0vw", height: "0vh", opacity: 0, scale: 0.8 },
+  SCRUB_FACTOR: 5,
+  INITIAL_STATE: { width: "98vw", height: "0vh", opacity: 0, scale: 1.2 },
   FINAL_STATE: {
     width: "98vw",
     height: "100vh",
     opacity: 1,
     scale: 1,
-    duration: 2,
-    ease: "power2.out",
+    duration: 1,
+    ease: "power5.out",
   },
 };
 
@@ -53,8 +53,8 @@ const ScreenSixScrollPower = () => {
     const { container, innerDiv, animatedServices, layout } = refs;
 
     gsap.set(innerDiv.current, ANIMATION_CONFIG.INITIAL_STATE);
-    gsap.set(animatedServices.current, { opacity: 0 });
-    gsap.set(layout.current, { opacity: 0 });
+    gsap.set(animatedServices.current, { opacity: 1 });
+    gsap.set(layout.current, { opacity: 1 });
 
     const scrollTrigger = ScrollTrigger.create({
       trigger: container.current,
@@ -72,7 +72,7 @@ const ScreenSixScrollPower = () => {
     timeline
       .to(innerDiv.current, ANIMATION_CONFIG.FINAL_STATE)
       .to(layout.current, { opacity: 1, duration: 1 }, "-=0.5")
-      .to(animatedServices.current, { opacity: 1, duration: 2 }, "-=0.3");
+      .to(animatedServices.current, { opacity: 1, duration: 2 }, "-=0.5");
 
     return () => {
       scrollTrigger.kill();
@@ -80,14 +80,7 @@ const ScreenSixScrollPower = () => {
     };
   }, []);
 
-  const items = [
-    { image: image1, text: "PLANTERS", id: 1, route: "/client-1" },
-    { image: image2, text: "DESK PLANTERS", id: 2, route: "/client-2" },
-    { image: image3, text: "TABLES", id: 3, route: "/client-3" },
-    { image: image4, text: "BREEZE BLOCKS", id: 4, route: "/client-4" },
-    { image: image5, text: "WALL CLADDING", id: 5, route: "/client-5" },
-    { image: image6, text: "SCULPTURES", id: 6, route: "/client-6" },
-  ];
+
 
   return (
     <>
@@ -114,7 +107,7 @@ const ScreenSixScrollPower = () => {
         </div>
       </section>
       <section className="new" style={{backgroundColor: theme.backgroundColor}}>
-       <Paper />
+  
       
       </section>
 

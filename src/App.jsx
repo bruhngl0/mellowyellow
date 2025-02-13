@@ -91,7 +91,7 @@ export const themes = [
   {
     primaryColor: "#fff", // Dodger Blue
     secondaryColor: "black", // Tomato Red
-    backgroundColor: "violet", // Deep Black
+    backgroundColor: "#D4D689", // Deep Black
   },
   {
     primaryColor: "white",
