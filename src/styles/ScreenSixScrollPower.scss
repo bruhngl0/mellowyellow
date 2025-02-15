@@ -126,14 +126,16 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-image: url("../../public/rename.png");
+ 
   background-size: cover;
 
   
-  
+   img{
+    width: 90rem;
+   }
 
     h1 {
         font-size: 7rem;

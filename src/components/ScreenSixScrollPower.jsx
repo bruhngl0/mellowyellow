@@ -25,14 +25,14 @@ const ANIMATION_CONFIG = {
   TRIGGER_START: "top 80%",
   TRIGGER_END: "center center",
   SCRUB_FACTOR: 5,
-  INITIAL_STATE: { width: "98vw", height: "0vh", opacity: 0, scale: 1.2 },
+  INITIAL_STATE: { width: "100vw", height: "0vh", opacity: 0, scale: 1},
   FINAL_STATE: {
-    width: "98vw",
+    width: "100vw",
     height: "100vh",
     opacity: 1,
     scale: 1,
     duration: 1,
-    ease: "power5.out",
+    ease: "power3.out",
   },
 };
 
@@ -107,7 +107,7 @@ const ScreenSixScrollPower = () => {
         </div>
       </section>
       <section className="new" style={{backgroundColor: theme.backgroundColor}}>
-  
+       <img src = "craft.png" />
       
       </section>
 
