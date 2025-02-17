@@ -28,7 +28,7 @@ const ANIMATION_CONFIG = {
   INITIAL_STATE: { width: "100vw", height: "0vh", opacity: 0, scale: 1},
   FINAL_STATE: {
     width: "100vw",
-    height: "100vh",
+    height: "93vh",
     opacity: 1,
     scale: 1,
     duration: 1,

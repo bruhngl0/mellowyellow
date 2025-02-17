@@ -23,7 +23,7 @@ const Waves = () => {
     v: 0,
     vs: 0,
     a: 0,
-    set: false,
+    set: true,
   });
 
   const setSize = useCallback(() => {
@@ -84,7 +84,8 @@ const Waves = () => {
     const bounds = containerRef.current.getBoundingClientRect();
 
     mouse.x = x - bounds.left;
-    mouse.y = y - bounds.top + window.scrollY;
+    mouse.y = y - bounds.top;
+    
 
     if (!mouse.set) {
       mouse.sx = mouse.x;
