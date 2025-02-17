@@ -22,9 +22,9 @@ import { color } from "framer-motion";
 gsap.registerPlugin(ScrollTrigger);
 
 const ANIMATION_CONFIG = {
-  TRIGGER_START: "top 80%",
+  TRIGGER_START: "top 60%",
   TRIGGER_END: "center center",
-  SCRUB_FACTOR: 5,
+  SCRUB_FACTOR: 1,
   INITIAL_STATE: { width: "100vw", height: "0vh", opacity: 0, scale: 1},
   FINAL_STATE: {
     width: "100vw",
