@@ -102,3 +102,17 @@
     }
   }
   
+
+
+  @media (max-width: 500px) {
+    .container-scroll .right-section-scroll .right-section-top-scroll{
+    flex-direction: column;
+    gap: 4px;
+      
+    }
+  
+  
+    .works__content{
+      display: none;
+    }
+  }

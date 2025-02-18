@@ -12,7 +12,7 @@ import RevealOnScroll from "./RevealOnScroll";
 
 const Layout = () => {
   return (
-    <div className="noise-overlay">
+   
       <div className="layout-main">
         <Hero />
      <Services />
@@ -29,7 +29,7 @@ const Layout = () => {
 
 
       </div>
-    </div>
+  
   );
 };
 
