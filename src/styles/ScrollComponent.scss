@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 98%;
+    width: 100vw;
     height: 100vh;
     padding: 0 30px;
     background-color: #0c0c0c;
@@ -108,6 +108,7 @@
     .container-scroll .right-section-scroll .right-section-top-scroll{
     flex-direction: column;
     gap: 4px;
+    padding: 0px;
       
     }
   
