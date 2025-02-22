@@ -94,7 +94,7 @@ export const themes = [
     backgroundColor: "#D4D689", // Deep Black
   },
   {
-    primaryColor: "white",
+    primaryColor: "black",
     secondaryColor: "#000",
     backgroundColor: "white",
   },
