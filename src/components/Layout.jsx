@@ -55,13 +55,13 @@ const Layout = () => {
    
       <div className="layout-main">
         <Hero />
-     <Services />
+        <RevealOnScroll props = "DESIGN WITHOUT MEANING IS JUST ANOTHER IMAGE IN THE NOISE"/>
      <Hover servicesData={servicesData} />
         {/* <Services />
         <ScreenSix /> */}
       
            <Dual />
-           <RevealOnScroll />
+           <RevealOnScroll props = "life is good" />
            <ScreenSixScrollPower />
        
         <ScrollComponent />
