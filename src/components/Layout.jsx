@@ -65,6 +65,7 @@ const Layout = () => {
            <ScreenSixScrollPower />
        
         <ScrollComponent />
+      
      
        
 
