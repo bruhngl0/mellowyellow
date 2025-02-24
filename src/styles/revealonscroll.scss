@@ -22,7 +22,9 @@
       padding: 0;
       font-family: "Cool";
       overflow-x: hidden;
-      margin-top: 5rem;
+      background-color: red;
+      
+      
       
      
     
@@ -50,6 +52,9 @@
         width: 100%;
         height: auto;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
        
         background-color: #cfb49c;
         margin: 0;
@@ -78,13 +83,15 @@
       .reveal-wrapper {
         position: relative;
         width: 100%;
-        height: 100%;
+        
         overflow: hidden;
        
-        background-color: black;
+       background-color: black;
         margin: 0;
         padding: 0;
         font-family: "Cool";
+        padding-top: 5rem;
+        padding-bottom: 5rem;
       
     
         

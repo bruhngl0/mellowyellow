@@ -61,7 +61,7 @@ const Layout = () => {
         <ScreenSix /> */}
       
            <Dual />
-           <RevealOnScroll props = "life is good" />
+           <RevealOnScroll props = "Let me optimize the component further to minimize unnecessary rerenders. I'll use several React optimization techniques." />
            <ScreenSixScrollPower />
        
         <ScrollComponent />
