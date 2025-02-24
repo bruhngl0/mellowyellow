@@ -30,10 +30,10 @@ const Hero = () => {
         >
           <p>MELLOW&nbsp;&nbsp;YELLOW </p>
         </div>
-        <div className="hero1-1-2" style={{  }}>
+        <div className="hero1-1-2" >
           <div
             className="hero1-1-2-1"
-            style={{  }}
+            
           >
             <ul>
               <li style={{ color: theme.primaryColor }}>◉ SEASONS </li>

@@ -141,7 +141,18 @@
 @media (max-width: 700px) {
 
   .hero1-main{
-   display: none;
+  margin: 0;
+ 
+ 
+  }
+
+
+  .hero1-2{
+ 
+  }
+
+  .hero1-1-1{
+
   }
   .hero1-3 {
     display: flex;
@@ -155,14 +166,29 @@
     display: none;
   }
 
+  .hero1-3-2 {
+    width: 100%;
+    border-right: none;
+
+  }
+
+  .hero1-3-2-1{
+    display: none;
+  }
+
   .test-container {
     padding: 0.5rem;
   }
 }
 
 
+.hero1-1-1{
+  width: 100vw;
+  
+}
+
 .hero1-1-2{
- 
+ display: none;
 }
 
 .test-container {

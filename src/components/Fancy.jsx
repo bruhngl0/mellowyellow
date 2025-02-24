@@ -15,8 +15,8 @@ const ScrollingText = memo(({ direction, color }) => {
   const { scrollY } = useScroll();
   const slide = useTransform(
     scrollY, 
-    [0, 500, 2500], // Added a middle point for smoother animation
-    [0, 0, direction === 'left' ? 200 : -200] // Starts at 0, stays at 0 briefly, then moves
+    [0, 500, 4500], // Added a middle point for smoother animation
+    [0, 0, direction === 'left' ? 100 : -200] // Starts at 0, stays at 0 briefly, then moves
   );
 
   return (
@@ -28,7 +28,7 @@ const ScrollingText = memo(({ direction, color }) => {
       }}
     >
       <h1 style={{ color }}>
-        {direction === 'left' ? 'MELLOW*MELLOW*MELLOW' : 'YELLOW*YELLOW*YELLOW'}
+        {direction === 'left' ? 'MELLOW*MELLOW*MELLOW' : '*YELLOW*YELLOW*YELLOW*'}
       </h1>
     </motion.div>
   );
