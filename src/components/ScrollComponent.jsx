@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef,memo, useCallback } from "react";
 import "../styles/ScrollComponent.scss";
 import { useColor } from "../context/ColorContext";
 import { motion, useInView, useAnimation } from "framer-motion";
@@ -84,6 +84,70 @@ const data = [
   },
 ];
 
+const Thumbnail = memo(({ item, index, activeIndex, dataLength, onMouseEnter }) => {
+  const isActive = index % dataLength === activeIndex;
+  
+  return (
+    <motion.div
+      className={`thumbnail-scroll ${isActive ? "active" : ""}`}
+      onMouseEnter={() => onMouseEnter(item, index)}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.2 }}
+    >
+      <img src={item.thumbnail} alt={item.title} />
+    </motion.div>
+  );
+});
+
+// Memoized content section
+const ContentSection = memo(({ selectedItem, theme }) => {
+  return (
+    <motion.div 
+      className="right-section-top-scroll"
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+    >
+      <p style={{color: theme.backgroundColor}}>{selectedItem.title}</p>
+      <p style={{color: theme.backgroundColor}}>{selectedItem.description}</p>
+      <p style={{color: theme.backgroundColor}}>
+        Globally recognized Independent Designer and Creative Director
+        based in the Netherlands. Working at the intersection of design, art,
+        and photography with a host of international clients that includes
+        Getty Institute, Adobe, Meta, Adidas, Bill Gates Ventures, VanMoof,
+        Lexus, Toyota, Samsung, ECCO, and more.
+        <br/><br/><br/><br/><br/>
+        mellowyellow@gmail.com
+      </p>
+      <p style={{color: theme.backgroundColor}}>IST:2:30pm</p>
+    </motion.div>
+  );
+});
+
+// Memoized scroll content wrapper
+const ScrollContent = memo(({ currentPosition, doubleData, activeIndex, onMouseEnter }) => {
+  return (
+    <motion.div 
+      className="scroll-content"
+      style={{
+        transform: `translateY(-${currentPosition}px)`,
+        transition: 'transform 0.5s ease-in-out'
+      }}
+    >
+      {doubleData.map((item, index) => (
+        <Thumbnail
+          key={`${item.id}-${index}`}
+          item={item}
+          index={index}
+          activeIndex={activeIndex}
+          dataLength={data.length}
+          onMouseEnter={onMouseEnter}
+        />
+      ))}
+    </motion.div>
+  );
+});
+
 const ScrollComponent = () => {
   const { theme } = useColor();
   const [selectedItem, setSelectedItem] = useState(data[0]);
@@ -92,42 +156,36 @@ const ScrollComponent = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const scrollRef = useRef(null);
   const controls = useAnimation();
+  const animationRef = useRef(null);
   
   const ITEM_HEIGHT = 210;
-  const doubleData = [...data, ...data];
+  const doubleData = React.useMemo(() => [...data, ...data], []);
 
-  // Check if element is in view
   const isInView = useInView(scrollRef, {
-    margin: "-100px 0px", // Adjust trigger margin as needed
-    once: false // Allow re-triggering when scrolling back into view
+    margin: "-100px 0px",
+    once: false
   });
 
+  const updatePosition = useCallback(() => {
+    setCurrentPosition(prev => {
+      const totalItems = data.length;
+      const nextPosition = prev + ITEM_HEIGHT;
+      return nextPosition >= totalItems * ITEM_HEIGHT ? 0 : nextPosition;
+    });
+  }, []);
+
   useEffect(() => {
-    let intervalId;
-
-    // Start animation only when in view
     if (isInView && isAnimating) {
-      intervalId = setInterval(() => {
-        setCurrentPosition(prev => {
-          const totalItems = data.length;
-          const nextPosition = prev + ITEM_HEIGHT;
-          
-          if (nextPosition >= totalItems * ITEM_HEIGHT) {
-            return 0;
-          }
-          return nextPosition;
-        });
-      }, 2000);
+      animationRef.current = setInterval(updatePosition, 2000);
     }
-
     return () => {
-      if (intervalId) {
-        clearInterval(intervalId);
+      if (animationRef.current) {
+        clearInterval(animationRef.current);
+        animationRef.current = null;
       }
     };
-  }, [isInView, isAnimating]);
+  }, [isInView, isAnimating, updatePosition]);
 
-  // Start animation when component comes into view
   useEffect(() => {
     if (isInView) {
       setIsAnimating(true);
@@ -140,7 +198,7 @@ const ScrollComponent = () => {
       setIsAnimating(false);
       controls.start({
         opacity: 0,
-        y: 0,
+        y: 50,
         transition: { duration: 0.5 }
       });
     }
@@ -149,76 +207,43 @@ const ScrollComponent = () => {
   useEffect(() => {
     const triggerIndex = Math.floor(currentPosition / ITEM_HEIGHT);
     const actualIndex = triggerIndex % data.length;
-    
     setSelectedItem(data[actualIndex]);
     setActiveIndex(actualIndex);
   }, [currentPosition]);
 
-  const handleMouseEnter = (item, index) => {
+  const handleMouseEnter = useCallback((item, index) => {
     setIsAnimating(false);
     setSelectedItem(item);
     setActiveIndex(index % data.length);
-  };
+  }, []);
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = useCallback(() => {
     if (isInView) {
       setIsAnimating(true);
     }
-  };
+  }, [isInView]);
 
   return (
     <div className="container-scroll">
-      <div 
+      <motion.div 
         className="left-section-scroll" 
         onMouseLeave={handleMouseLeave}
         ref={scrollRef}
+        initial={{ opacity: 0, y: 50 }}
+        animate={controls}
       >
-        <motion.div 
-          className="inner-container-scroll"
-          initial={{ opacity: 1, y: 50 }}
-          animate={controls}
-        >
-          <motion.div 
-            className="scroll-content"
-            style={{
-              transform: `translateY(-${currentPosition}px)`,
-              transition: 'transform 0.5s ease-in-out'
-            }}
-          >
-            {doubleData.map((item, index) => (
-              <motion.div
-                key={`${item.id}-${index}`}
-                className={`thumbnail-scroll ${index % data.length === activeIndex ? "active" : ""}`}
-                onMouseEnter={() => handleMouseEnter(item, index)}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-              >
-                <img src={item.thumbnail} alt={item.title} />
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
-      </div>
+        <div className="inner-container-scroll">
+          <ScrollContent
+            currentPosition={currentPosition}
+            doubleData={doubleData}
+            activeIndex={activeIndex}
+            onMouseEnter={handleMouseEnter}
+          />
+        </div>
+      </motion.div>
+      
       <div className="right-section-scroll">
-        <motion.div 
-          className="right-section-top-scroll"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <p style={{color: theme.backgroundColor}}>{selectedItem.title}</p>
-          <p style={{color: theme.backgroundColor}}>{selectedItem.description}</p>
-          <p style={{color: theme.backgroundColor}}>
-            Globally recognized Independent Designer and Creative Director
-            based in the Netherlands. Working at the intersection of design, art,
-            and photography with a host of international clients that includes
-            Getty Institute, Adobe, Meta, Adidas, Bill Gates Ventures, VanMoof,
-            Lexus, Toyota, Samsung, ECCO, and more.
-            <br/><br/><br/><br/><br/>
-            mellowyellow@gmail.com
-          </p>
-          <p style={{color: theme.backgroundColor}}>IST:2:30pm</p>
-        </motion.div>
+        <ContentSection selectedItem={selectedItem} theme={theme} />
         <motion.div 
           className="right-section-bottom-scroll"
           initial={{ opacity: 0, scale: 0.95 }}
@@ -236,4 +261,4 @@ const ScrollComponent = () => {
   );
 };
 
-export default ScrollComponent;
+export default memo(ScrollComponent);
