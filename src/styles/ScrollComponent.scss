@@ -104,6 +104,36 @@
   }
   
 
+  .container-scroll {
+    position: relative;
+    overflow: hidden;
+    
+    .left-section-scroll {
+      opacity: 1; // Start hidden
+      will-change: transform, opacity;
+      
+      &.in-view {
+        opacity: 1;
+      }
+    }
+    
+    .scroll-content {
+      will-change: transform;
+    }
+    
+    .thumbnail-scroll {
+      transition: transform 0.2s ease-out;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+      
+      &.active {
+        transform: scale(1.1);
+      }
+    }
+  }
+
 
   @media (max-width: 500px) {
 

@@ -42,7 +42,7 @@ const ImageTransition = memo(({ src, alt }) => {
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 1}}
-      transition={{ duration: 1, ease: "easeInOut" }}
+      transition={{ duration: 1, ease: "easeIn" }}
     />
   );
 });

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../styles/ScrollComponent.scss";
 import { useColor } from "../context/ColorContext";
+import { motion, useInView, useAnimation } from "framer-motion";
 // Thumbnail Images (640x800)
 import thumbnail_1 from "../assets/ScrollComponent/thumbnail-1.jpg";
 import thumbnail_2 from "../assets/ScrollComponent/thumbnail-2.jpg";
@@ -84,22 +85,28 @@ const data = [
 ];
 
 const ScrollComponent = () => {
-
   const { theme } = useColor();
   const [selectedItem, setSelectedItem] = useState(data[0]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [currentPosition, setCurrentPosition] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(true);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const scrollRef = useRef(null);
+  const controls = useAnimation();
   
-  const ITEM_HEIGHT = 210; // 200px height + 10px margin
-  const TRIGGER_POINT = 400; // Invisible trigger point
-
+  const ITEM_HEIGHT = 210;
   const doubleData = [...data, ...data];
+
+  // Check if element is in view
+  const isInView = useInView(scrollRef, {
+    margin: "-100px 0px", // Adjust trigger margin as needed
+    once: false // Allow re-triggering when scrolling back into view
+  });
 
   useEffect(() => {
     let intervalId;
 
-    if (isAnimating) {
+    // Start animation only when in view
+    if (isInView && isAnimating) {
       intervalId = setInterval(() => {
         setCurrentPosition(prev => {
           const totalItems = data.length;
@@ -118,7 +125,26 @@ const ScrollComponent = () => {
         clearInterval(intervalId);
       }
     };
-  }, [isAnimating]);
+  }, [isInView, isAnimating]);
+
+  // Start animation when component comes into view
+  useEffect(() => {
+    if (isInView) {
+      setIsAnimating(true);
+      controls.start({
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5 }
+      });
+    } else {
+      setIsAnimating(false);
+      controls.start({
+        opacity: 0,
+        y: 0,
+        transition: { duration: 0.5 }
+      });
+    }
+  }, [isInView, controls]);
 
   useEffect(() => {
     const triggerIndex = Math.floor(currentPosition / ITEM_HEIGHT);
@@ -135,7 +161,9 @@ const ScrollComponent = () => {
   };
 
   const handleMouseLeave = () => {
-    setIsAnimating(true);
+    if (isInView) {
+      setIsAnimating(true);
+    }
   };
 
   return (
@@ -143,9 +171,14 @@ const ScrollComponent = () => {
       <div 
         className="left-section-scroll" 
         onMouseLeave={handleMouseLeave}
+        ref={scrollRef}
       >
-        <div className="inner-container-scroll">
-          <div 
+        <motion.div 
+          className="inner-container-scroll"
+          initial={{ opacity: 1, y: 50 }}
+          animate={controls}
+        >
+          <motion.div 
             className="scroll-content"
             style={{
               transform: `translateY(-${currentPosition}px)`,
@@ -153,37 +186,51 @@ const ScrollComponent = () => {
             }}
           >
             {doubleData.map((item, index) => (
-              <div
+              <motion.div
                 key={`${item.id}-${index}`}
                 className={`thumbnail-scroll ${index % data.length === activeIndex ? "active" : ""}`}
                 onMouseEnter={() => handleMouseEnter(item, index)}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
               >
                 <img src={item.thumbnail} alt={item.title} />
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
       <div className="right-section-scroll">
-        <div className="right-section-top-scroll">
+        <motion.div 
+          className="right-section-top-scroll"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <p style={{color: theme.backgroundColor}}>{selectedItem.title}</p>
           <p style={{color: theme.backgroundColor}}>{selectedItem.description}</p>
-          <p style={{color: theme.backgroundColor}}>Globally recognized Independent Designer and Creative Director
-based in the Netherlands. Working at the intersection of design, art,
-and photography with a host of international clients that includes
-Getty Institute, Adobe, Meta, Adidas, Bill Gates Ventures, VanMoof,
-Lexus, Toyota, Samsung, ECCO, and more.<br/><br/><br/><br/><br/>mellowyellow@gmail.com</p>
-
-      <p style={{color: theme.backgroundColor}}>IST:2:30pm</p>
-
-        </div>
-        <div className="right-section-bottom-scroll">
+          <p style={{color: theme.backgroundColor}}>
+            Globally recognized Independent Designer and Creative Director
+            based in the Netherlands. Working at the intersection of design, art,
+            and photography with a host of international clients that includes
+            Getty Institute, Adobe, Meta, Adidas, Bill Gates Ventures, VanMoof,
+            Lexus, Toyota, Samsung, ECCO, and more.
+            <br/><br/><br/><br/><br/>
+            mellowyellow@gmail.com
+          </p>
+          <p style={{color: theme.backgroundColor}}>IST:2:30pm</p>
+        </motion.div>
+        <motion.div 
+          className="right-section-bottom-scroll"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <img
             src={selectedItem.content}
             alt={selectedItem.title}
             className="content-image-scroll"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
