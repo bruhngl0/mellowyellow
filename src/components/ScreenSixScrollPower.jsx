@@ -94,7 +94,8 @@ const ScreenSixScrollPower = () => {
                 className="scrollPower-p"
                 style={{ color: theme.backgroundColor }}
               >
-                abcd
+                SOCIAL <br/>
+                DINING
               </p>
               <p className="scrollPower-mini">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum

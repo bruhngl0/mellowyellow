@@ -20,7 +20,7 @@ const Fancy = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 500);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
