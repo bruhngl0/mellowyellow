@@ -84,8 +84,8 @@ const clientsData = {
 export const themes = [
   {
     primaryColor: "#fff",
-    secondaryColor: "black",
-    backgroundColor: "#494848",
+    secondaryColor: "#000",
+    backgroundColor: "white",
  
   },
   {
@@ -95,8 +95,10 @@ export const themes = [
   },
   {
     primaryColor: "black",
-    secondaryColor: "#000",
-    backgroundColor: "white",
+    
+
+    secondaryColor: "black",
+    backgroundColor: "#494848",
   },
   {
     primaryColor: "#fff",
