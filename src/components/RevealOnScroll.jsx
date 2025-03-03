@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import "../styles/revealonscroll.scss";
 import { useColor } from "../context/ColorContext";
+import Hover from './Hover';
 
 
 const RevealOnScroll = ({ props, threshold = 0.6 }) => {
@@ -15,7 +16,7 @@ const RevealOnScroll = ({ props, threshold = 0.6 }) => {
   });
 
   const variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 50 },
     visible: { 
       opacity: 1, 
       y: 0,
@@ -35,7 +36,10 @@ const RevealOnScroll = ({ props, threshold = 0.6 }) => {
         animate={isInView ? "visible" : "hidden"}
       >
         <h1 style={{color: theme.backgroundColor}}>{props}</h1>
+        
       </motion.div>
+
+    
     </section>
   );
 };

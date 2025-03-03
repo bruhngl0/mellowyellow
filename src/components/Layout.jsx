@@ -12,10 +12,7 @@ import RevealOnScroll from "./RevealOnScroll";
 import Hover from "./Hover";
 
 
-import image1 from "../../public/grid.jpg";
-import image2 from "../../public/grid1.jpg";
-import image3 from "../../public/grid2.jpg";
-import image4 from "../../public/grid3.jpg";
+
 
 
 export const servicesData = [
