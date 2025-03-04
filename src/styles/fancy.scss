@@ -3,52 +3,60 @@
   width: 90%;
   overflow: hidden;
   position: relative;
-
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: start;
 }
 
-
 .content-wrapper-fancy {
   position: relative;
-  height: 100%;  // Changed from 30%
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-
   margin-top: 3rem;
-
 }
+
+.scrolling-text-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 .overlay-image {
-  position: absolute;  /* Changed to fixed to stay centered in viewport */
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: auto;  /* Let the image dictate the container width */
-  z-index: 10;
+  width: min(300px, 80vw); /* Match the width in the img style */
+  height: 400px;
+  aspect-ratio: 1 / 1; /* Create a square aspect ratio */
+  z-index: 20; /* Higher z-index to ensure it's above scrolling text */
   pointer-events: none;
-  
-  img {
-    width: min(300px, 80vw);  /* Responsive width with maximum of 300px */
-    height: auto;
-    object-fit: cover;
-    display: block;  /* Removes any unwanted space below image */
-  }
 }
 
+/* Specific styles for slider inside overlay-image */
+.overlay-image .slider-container {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-image .slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .box-fancy {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
   background-color: transparent;
   padding: 5px;
- 
-  width: 150%; // Makes boxes wider than container
-  
+  width: 150%;
+
   h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -63,36 +71,26 @@
   }
 }
 
-.box-1-fancy {
-  align-self: center;
+.box-left-fancy {
+  align-self: flex-start;
   background-color: transparent;
 }
 
-.box-2-fancy {
-  align-self: center;
+.box-right-fancy {
+  align-self: flex-end;
   background-color: transparent;
 }
-
-.box-3-fancy {
-  align-self: center;
-  background-color: transparent;
-}
-
-.box-4-fancy {
-  align-self: center;
-  background-color: transparent;
-}
-
-
-
 
 @media (max-width: 500px) {
-  .container-fancy{
-    
+  .container-fancy {
+    width: 95%;
   }
-
-
-  .overlay-image{
-   
+  
+  .box-fancy h1 {
+    font-size: 60px;
+  }
+  
+  .overlay-image {
+    width: min(250px, 70vw);
   }
 }

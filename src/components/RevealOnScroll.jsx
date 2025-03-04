@@ -38,7 +38,20 @@ const RevealOnScroll = ({ props, threshold = 0.6 }) => {
         <h1 style={{color: theme.backgroundColor}}>{props}</h1>
         
       </motion.div>
-
+      <div className="video-container-screen">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline // Added for better mobile support
+          className="video-bg-screen"
+          style={{width: "100vw" , height: "auto"}}
+        >
+          <source src= "tv.mp4"  type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+       
+      </div>
     
     </section>
   );
