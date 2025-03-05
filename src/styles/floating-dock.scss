@@ -3,18 +3,16 @@
  display: flex;
  justify-content: center;
  align-items: center;
-  transform: translateX(-50%);
+
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
+
+
   padding: 10px 20px;
  
-  z-index: 1000;
+
  
   width: 100%;
-  &.translate-y-20 {
-    transform: translateX(-50%) translateY(20px);
-  }
+ 
 }
 
 .dock-items {
@@ -40,7 +38,7 @@
     color: #e6e6e5;;
     padding: 10px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 20%;
+   
     transition: background 0.2s ease;
 
     &:hover {

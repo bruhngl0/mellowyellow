@@ -26,9 +26,9 @@ const Hero = () => {
       >
         <div
           className="hero1-1-1"
-          style={{ color: theme.primaryColor, }}
+          style={{ color: "black" }}
         >
-          <p>MELLOW&nbsp;&nbsp;YELLOW </p>
+          <p   style={{ color: "black" }}>MELLOW&nbsp;&nbsp;YELLOW </p>
         </div>
         <div className="hero1-1-2" >
           <div
@@ -36,9 +36,9 @@ const Hero = () => {
             
           >
             <ul>
-              <li style={{ color: theme.primaryColor }}>◉ SEASONS </li>
-              <li style={{ color: theme.primaryColor }}>◉ DESIGNS </li>
-              <li style={{ color: theme.primaryColor }}>◉ TYPOGRAPHY </li>
+              <li style={{ color: "black" }}>◉ FEATURED </li>
+              <li style={{ color: "black" }}>◉ WORKS </li>
+              <li style={{ color: "black" }}>◉ ENQUIRY </li>
             </ul>
           </div>
           <div className="hero1-1-2-2"></div>

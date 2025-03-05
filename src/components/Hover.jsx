@@ -51,7 +51,7 @@ const Hover = ({ servicesData }) => {
         {/* Right Side - Service Details with Single Video */}
         <motion.div className="hover-details" style={{ backgroundColor: theme.backgroundColor }} variants={variants}>
           <motion.video
-            src="mellowyellow.mp4"
+            src="v2.mp4"
             controls
             autoPlay
             muted

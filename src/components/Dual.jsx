@@ -7,7 +7,7 @@ const Dual = () => {
     <div className='dual-main'>
         <div className='dual-left'>
            
-            <img src  = "dual.avif" />
+            <img src  = "candle.jpg" />
         </div>
         <div className='dual-right'>
             <Fancy />

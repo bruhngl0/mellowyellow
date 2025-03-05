@@ -52,13 +52,13 @@ const Layout = () => {
    
       <div className="layout-main">
         <Hero />
-        <RevealOnScroll props = "DESIGN WITHOUT MEANING IS JUST ANOTHER IMAGE IN THE NOISE"/>
+        <RevealOnScroll props = "DESIGN WITHOUT MEANING  IS  JUST AN ANOTHER  IMAGE  WITH   NOISE!"/>
      <Hover servicesData={servicesData} />
         {/* <Services />
         <ScreenSix /> */}
       
            <Dual />
-           <RevealOnScroll props = "Let me optimize the component further to minimize unnecessary rerenders. I'll use several React optimization techniques." />
+          
            <ScreenSixScrollPower />
        
         <ScrollComponent />

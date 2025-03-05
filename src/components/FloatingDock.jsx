@@ -24,7 +24,7 @@ const FloatingDock = () => {
               display: 'flex',
               gap: '5px',
               padding: '5px',
-              borderRadius: '10px',
+              
               cursor: 'pointer',
               backgroundColor: theme.backgroundColor,
             }}
@@ -37,7 +37,7 @@ const FloatingDock = () => {
                 width: '20px',
                 height: '20px',
                 backgroundColor: theme.primaryColor,
-                borderRadius: '5px',
+               
               }}
             ></div>
             <div
@@ -45,7 +45,7 @@ const FloatingDock = () => {
                 width: '20px',
                 height: '20px',
                 backgroundColor: theme.secondaryColor,
-                borderRadius: '5px',
+               
               }}
             ></div>
           </motion.div>

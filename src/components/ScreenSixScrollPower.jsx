@@ -5,18 +5,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useColor } from "../context/ColorContext";
 import Services from "./Services";
 
-import image1 from "../../public/mellow1.png";
-import image2 from "../../public/mellow2.png";
-import image3 from "../../public/mellow3.png";
-import image4 from "../../public/mellow4.png";
-import image5 from "../../public/mellow5.png";
-import image6 from "../../public/mellow6.png";
+
 
 import "../styles/ScreenSixScrollPower.scss"; // Merged SCSS file
-import Fancy from "./Fancy";
 
-import ScrollComponent from "./ScrollComponent";
-import { color } from "framer-motion";
 
 
 gsap.registerPlugin(ScrollTrigger);
