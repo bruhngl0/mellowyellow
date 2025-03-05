@@ -101,6 +101,17 @@ const ScreenSixScrollPower = () => {
       </section>
       <section className="new" style={{backgroundColor: theme.backgroundColor}}>
        <img src = "craft.png" />
+       <video
+          autoPlay
+          loop
+          muted
+          playsInline // Added for better mobile support
+          className="cube-vid"
+          style={{width: "auto" , height: "12.5vh", position: "absolute", bottom: "5%",right: "2%"}}
+        >
+          <source src="shortdes.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       
       </section>
 
