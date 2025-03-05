@@ -50,6 +50,19 @@
       }
     }
   
+     .inner-div-ros{
+      display: flex;
+      flex-direction: row;
+
+      >h1{
+        letter-spacing: -0.08em;
+          font-size: 5.5rem;
+          font-weight: 400;
+          padding-left: 1rem;
+      }
+     }
+
+
     @media (max-width: 1300px) {
   
      .reveal-wrapper {
@@ -73,10 +86,12 @@
        .reveal-content {
           width: 100%;
           will-change: transform, opacity;
+        
   
           >h1{
             font-size: 3rem;
             padding-left: 1.5rem;
+         
           }
         }
       }
@@ -84,12 +99,15 @@
 
 
     .ros{
+     
       >p{
         font-size: 2rem;
+      
       }
 
       >ul{
         >li{
+       
           padding-top: 20px;
         }
       }

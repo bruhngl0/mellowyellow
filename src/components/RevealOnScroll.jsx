@@ -32,7 +32,21 @@ const RevealOnScroll = ({ props, threshold = 0.6 }) => {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <h1 style={{color: theme.backgroundColor}}>{props}</h1>
+        <div className='inner-div-ros'>
+        <h1 style={{color: theme.backgroundColor}}>{props} <video
+          autoPlay
+          loop
+          muted
+          playsInline // Added for better mobile support
+          className="video-bg-screen"
+          style={{width: "5vw" , height: "auto", marginLeft: "1rem", }}
+        >
+          <source src="hero.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video></h1>
+        
+        </div>
+
       </motion.div>
       
       <motion.div 

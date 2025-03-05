@@ -7,13 +7,21 @@ import thumbnail_1 from "../../public/thumb1.png";
 import thumbnail_2 from "../../public/thumb2.png";
 import thumbnail_3 from "../../public/thumb3.png";
 import thumbnail_4 from "../../public/thumb4.png";
-import thumbnail_5 from "../assets/ScrollComponent/thumbnail-5.jpg";
-import thumbnail_6 from "../assets/ScrollComponent/thumbnail-6.jpg";
+import thumbnail_5 from "../../public/thumb5.png";
+import thumbnail_6 from "../../public/thumb6.png";
+import thumbnail_7 from "../../public/thumb7.png";
+import thumbnail_8 from "../../public/thumb8.png";
+import thumbnail_9 from "../../public/thumb9.png";
+import thumbnail_10 from "../../public/thumb10.png";
+import thumbnail_11 from "../../public/thumb11.png";
+import thumbnail_12 from "../../public/thumb12.png";
+
+
 import content_1 from "../../public/thumb1desc.jpeg";
-import content_2 from "../assets/ScrollComponent/content-2.jpg";
-import content_3 from "../assets/ScrollComponent/content-3.jpg";
+import content_2 from "../../public/astrothumb.png";
+import content_3 from "../../public/palmsthumb.jpg";
 import content_4 from "../../public/thumb4desc.jpg";
-import content_5 from "../assets/ScrollComponent/content-5.jpg";
+import content_5 from "../../public/unnssrythumb.jpg";
 import content_6 from "../assets/ScrollComponent/content-6.jpg";
 import { color } from "framer-motion";
 
@@ -21,65 +29,87 @@ const data = [
   {
     id: 1,
     thumbnail: thumbnail_1,
-    title: "Title1",
-    description: "Description1",
+    title: "UMIMATCHA",
+    description: "DESIGN/BRANDING",
     content: content_1,
   },
   {
     id: 2,
     thumbnail: thumbnail_2,
-    title: "Title2",
-    description: "Description2",
+    title: "DESIDHARTI",
+    description: "DES/BRANDING/WEBSITE",
     content: content_2,
   },
   {
     id: 3,
     thumbnail: thumbnail_3,
-    title: "Title3",
-    description: "Description3",
+    title: "PEEKABOO",
+    description: "DES/PACKAGING",
     content: content_3,
   },
   {
     id: 4,
     thumbnail: thumbnail_4,
-    title: "Title4",
-    description: "Description4",
+    title: "HOLYKICKS",
+    description: "BRANDING/WEBSITE",
     content: content_4,
   },
   {
     id: 5,
     thumbnail: thumbnail_5,
-    title: "Title5",
-    description: "Description5",
+    title: "IBH",
+    description: "SMM/MARKETING",
     content: content_5,
   },
   {
     id: 6,
     thumbnail: thumbnail_6,
-    title: "Title6",
-    description: "Description6",
+    title: "BHRAMA",
+    description: "SMM/PRODUCTION",
     content: content_6,
   },
 
   {
     id: 7,
-    thumbnail: thumbnail_4,
-    title: "Title4",
-    description: "Description4",
-    content: content_4,
+    thumbnail: thumbnail_7,
+    title: "PALMS",
+    description: "SMM/PRODUCTION",
+    content: content_3,
   },
   {
     id: 8,
-    thumbnail: thumbnail_5,
-    title: "Title5",
-    description: "Description5",
+    thumbnail: thumbnail_8,
+    title: "ITC",
+    description: "SMM/PRODUCTION",
     content: content_5,
   },
   {
     id: 9,
-    thumbnail: thumbnail_6,
-    title: "Title6",
-    description: "Description6",
+    thumbnail: thumbnail_9,
+    title: "GAMEDIAZ",
+    description: "SMM",
+    content: content_6,
+  },
+
+  {
+    id: 10,
+    thumbnail: thumbnail_10,
+    title: "ASTRO",
+    description: "SMM",
+    content: content_2,
+  },
+  {
+    id: 11,
+    thumbnail: thumbnail_11,
+    title: "MRN",
+    description: "SMM",
+    content: content_6,
+  },
+  {
+    id: 12,
+    thumbnail: thumbnail_12,
+    title: "UNNECESSARY",
+    description: "DES/BRANDING/SMM/WEBSITE",
     content: content_6,
   },
 ];
