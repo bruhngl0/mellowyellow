@@ -18,28 +18,28 @@ import Hover from "./Hover";
 export const servicesData = [
   {
     id: 1,
-    title: "Branding",
+    title: "BRANDING",
     description: "Expert psychiatric care for ADHD, anxiety, depression, bipolar disorder, and more.",
   
     image: "https://placehold.co/1200?text=Neuropsychiatry"
   },
   {
     id: 2,
-    title: "Social Media Marketing",
+    title: "SOCIAL MEDIA MARKETING",
     description: "Advanced neuropsychiatric interventions for cognitive and emotional well-being.",
  
     image: "https://placehold.co/1200?text=Neuropsychiatry"
   },
   {
     id: 3,
-    title: "Web Design/Development",
+    title: "PR ACTIVITIES",
     description: "Personalized counseling for individuals, couples, and families.",
   
     image: "https://placehold.co/1200?text=Counseling+%26+Therapy"
   },
   {
     id: 4,
-    title: "Social Dining",
+    title: "WEB DES/DEV",
     description: "Holistic therapies including stress management and mindfulness training.",
    
     image: "https://placehold.co/1200?text=Mindfulness+%26+Wellness"

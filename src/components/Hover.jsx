@@ -34,19 +34,44 @@ const Hover = ({ servicesData }) => {
       <motion.div className="hover-container" variants={variants}>
         {/* Left Side - Services List */}
         <motion.div className="hover-list" variants={variants}>
-          {servicesData.map((service) => (
-            <motion.div
-              key={service.id}
-              className={`hover-card ${activeService.id === service.id ? "active" : ""}`}
-              onMouseEnter={() => setActiveService(service)}
-              style={{ borderBottom: `0.5px solid ${theme.backgroundColor}` }}
-              whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-            >
-              {service.icon}
-              <h3>{service.title}</h3>
-            </motion.div>
-          ))}
-        </motion.div>
+  {servicesData.map((service) => (
+    <motion.div
+      key={service.id}
+      className={`hover-card ${activeService.id === service.id ? "active" : ""}`}
+      onMouseEnter={() => setActiveService(service)}
+      style={{
+        borderBottom: `0.5px solid ${theme.backgroundColor}`,
+        position: "relative",
+        overflow: "hidden",
+      }}
+      whileHover={{
+        
+      
+        transition: { duration: 0.4, ease: "easeOut" },
+      }}
+    >
+      {/* Glowing Background Effect */}
+      <motion.div
+        className="hover-glow"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: activeService.id === service.id ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      />
+      
+      {service.icon}
+      <motion.h3
+        initial={{ color: "#fff" }}
+        whileHover={{
+          color: theme.primaryColor,
+          transition: { duration: 0.3 },
+        }}
+      >
+        {service.title}
+      </motion.h3>
+    </motion.div>
+  ))}
+</motion.div>
+
 
         {/* Right Side - Service Details with Single Video */}
         <motion.div className="hover-details" style={{ backgroundColor: theme.backgroundColor }} variants={variants}>
@@ -57,8 +82,8 @@ const Hover = ({ servicesData }) => {
             muted
             loop
             className="service-video"
-            style={{ width: "100%", maxWidth: "500px", height: "auto", boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)" }}
-            whileHover={{ scale: 1.02 }}
+            style={{ width: "100%", maxWidth: "525px", height: "auto", boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)" }}
+          
           />
           <motion.p style={{ fontSize: "1.2rem", textAlign: "center", maxWidth: "400px", marginTop: "10px" }} variants={variants}>
             {activeService.description}

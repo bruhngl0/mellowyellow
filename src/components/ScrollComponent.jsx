@@ -139,7 +139,7 @@ const ContentSection = memo(({ selectedItem, theme }) => {
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <p style={{color: theme.backgroundColor}}>{selectedItem.title}</p>
-      <p style={{color: theme.backgroundColor}}>{selectedItem.description}</p>
+      <p style={{color: theme.backgroundColor}}>{selectedItem.description}    </p>
       <p style={{color: theme.backgroundColor}}>
         Globally recognized Independent Designer and Creative Director
         based in the Netherlands. Working at the intersection of design, art,
@@ -149,7 +149,17 @@ const ContentSection = memo(({ selectedItem, theme }) => {
         <br/><br/><br/><br/><br/>
         mellowyellow@gmail.com
       </p>
-      <p style={{color: theme.backgroundColor}}>IST:2:30pm</p>
+      <p style={{color: theme.backgroundColor}}>IST:2:30pm  <video
+          autoPlay
+          loop
+          muted
+          playsInline // Added for better mobile support
+          className="cube-vid"
+          style={{width: "auto" , height: "14.5vh", marginTop: "1rem"}}
+        >
+          <source src="small.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video></p>
     </motion.div>
   );
 });

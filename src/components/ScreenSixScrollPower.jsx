@@ -109,7 +109,7 @@ const ScreenSixScrollPower = () => {
           className="cube-vid"
           style={{width: "auto" , height: "12.5vh", position: "absolute", bottom: "5%",right: "2%"}}
         >
-          <source src="shortdes.mp4" type="video/mp4" />
+          <source src="cube.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       
