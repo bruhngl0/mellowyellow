@@ -82,16 +82,64 @@ const ScreenSixScrollPower = () => {
         <div className="scrollpower-main">
           <div ref={refs.container} className="about-container-scrollpower">
             <div ref={refs.innerDiv} className="about-inner-scrollpower">
+
+
+            <div className="sp-main">
+            <div className="sp-left">
+              <img src = "sdasset1.png" />
+            </div>
+            
+            <div className="sp-right">
+              <div className="sp-right-1">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline // Added for better mobile support
+                className="cube-vid"
+                style={{width: "auto" , height: "35.5vh",  }}
+              >
+            <source src="sdn.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <p style={{color: "black", fontSize: "13px", paddingLeft: "1rem"}}> We understand that your website is more than just a digital presence—it’s a reflection of your brand. From intuitive navigation to stunning visuals, we ensure your site not only stands out but also delivers measurable results.
+            </p>
+              </div>
+              <div className="sp-right-2">
+                <img src = "sdasset2.png" />
+               
+             
+              </div>
+            </div>
+            </div>
+            <div className="sp-mid">
               <p
                 className="scrollPower-p"
                 style={{ color: theme.backgroundColor }}
               >
-                SOCIAL <br/>
-                DINING
+               
               </p>
               <p className="scrollPower-mini">
-              creating a unique blend of meaningful conversations, community bonding, and mindful eating experiences. These gatherings offer a space for individuals to connect over curated meals, fostering mental well-being and a sense of belonging. By combining the principles of brain wellness with the joy of shared dining, Optimal Minds promotes holistic well-being through engaging discussions, nourishing food, and a welcoming atmosphere.
+             
               </p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+              
+             
             </div>
           </div>
         </div>

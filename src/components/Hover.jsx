@@ -74,18 +74,18 @@ const Hover = ({ servicesData }) => {
 
 
         {/* Right Side - Service Details with Single Video */}
-        <motion.div className="hover-details" style={{ backgroundColor: theme.backgroundColor }} variants={variants}>
+        <motion.div className="hover-details" style={{ backgroundColor: "black" }} variants={variants}>
           <motion.video
-            src="v2.mp4"
+            src="video_1.mp4"
             controls
             autoPlay
             muted
             loop
             className="service-video"
-            style={{ width: "100%", maxWidth: "525px", height: "auto", boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)" }}
+            style={{ width: "100%", maxWidth: "685px", height: "auto", boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)" }}
           
           />
-          <motion.p style={{ fontSize: "0.8rem", textAlign: "left", maxWidth: "450px", padding: "10px", }} variants={variants}>
+          <motion.p style={{ fontSize: "0.8rem", textAlign: "left", maxWidth: "680px", color: theme.backgroundColor,  display: "flex", marginTop: "7rem",}} variants={variants}>
             {activeService.description}
           </motion.p>
         </motion.div>

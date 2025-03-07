@@ -121,6 +121,13 @@ const data = [
     description: "DES/BRANDING/SMM/WEBSITE",
     content: content_5,
   },
+  {
+    id: 13,
+    thumbnail: thumbnail_12,
+    title: "TICKLEPICKLE",
+    description: "DES/BRANDING/SMM/WEBSITE",
+    content: content_5,
+  },
 ];
 
 const Thumbnail = memo(({ item, index, activeIndex, dataLength, onMouseEnter }) => {
