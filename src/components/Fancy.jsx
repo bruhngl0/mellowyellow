@@ -50,7 +50,7 @@ const Fancy = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        MANIAC
+      VISION
       </motion.h1>
       
       <motion.h3
@@ -59,9 +59,8 @@ const Fancy = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        TWINS, BORN IN UKRAINE, RAISED IN CANADA. HIGH SCHOOL DROPOUTS. 
-        TRAINED IN ITALY AND CALIFORNIA. OILSTAIN LAB IS THEIR VISION, 
-        A PURE MANIFESTATION OF ART.
+        LESS NOISE, MORE IMPACT. MELLO YELLOW BELIEVES IN THE POWER OF CLEAR MESSAGING, STUNNING VISUALS, AND SEAMLESS EXECUTION. WE STRIP AWAY THE UNNECESSARY TO LET BOLD IDEAS SHINE. 
+
       </motion.h3>
       
       <div className="content-wrapper-fancy">

@@ -22,7 +22,16 @@ import content_2 from "../../public/astrothumb.png";
 import content_3 from "../../public/palmsthumb.jpg";
 import content_4 from "../../public/thumb4desc.jpg";
 import content_5 from "../../public/unnssrythumb.jpg";
-import content_6 from "../assets/ScrollComponent/content-6.jpg";
+import content_6 from "../../public/thumbdesi.jpg";
+import content_7 from "../../public/umithumb.jpg";
+import content_8 from "../../public/mrnthumb.jpg";
+import content_9 from "../../public/holykicksthumb.jpg";
+import content_10 from "../../public/ibhthumb.jpg"
+import content_11 from "../../public/itcthumb.jpg"
+import content_12 from "../../public/bhramathumb.jpg"
+import content_13 from "../../public/pekathumb.jpg"
+import content_14 from "../../public/gamethumb.jpg"
+
 import { color } from "framer-motion";
 
 const data = [
@@ -31,42 +40,42 @@ const data = [
     thumbnail: thumbnail_1,
     title: "UMIMATCHA",
     description: "DESIGN/BRANDING",
-    content: content_1,
+    content: content_7,
   },
   {
     id: 2,
     thumbnail: thumbnail_2,
     title: "DESIDHARTI",
     description: "DES/BRANDING/WEBSITE",
-    content: content_2,
+    content: content_6,
   },
   {
     id: 3,
     thumbnail: thumbnail_3,
     title: "PEEKABOO",
     description: "DES/PACKAGING",
-    content: content_3,
+    content: content_13,
   },
   {
     id: 4,
     thumbnail: thumbnail_4,
     title: "HOLYKICKS",
     description: "BRANDING/WEBSITE",
-    content: content_4,
+    content: content_9,
   },
   {
     id: 5,
     thumbnail: thumbnail_5,
     title: "IBH",
     description: "SMM/MARKETING",
-    content: content_5,
+    content: content_10,
   },
   {
     id: 6,
     thumbnail: thumbnail_6,
     title: "BHRAMA",
     description: "SMM/PRODUCTION",
-    content: content_6,
+    content: content_11,
   },
 
   {
@@ -81,14 +90,14 @@ const data = [
     thumbnail: thumbnail_8,
     title: "ITC",
     description: "SMM/PRODUCTION",
-    content: content_5,
+    content: content_12,
   },
   {
     id: 9,
     thumbnail: thumbnail_9,
     title: "GAMEDIAZ",
     description: "SMM",
-    content: content_6,
+    content: content_14,
   },
 
   {
@@ -103,14 +112,14 @@ const data = [
     thumbnail: thumbnail_11,
     title: "MRN",
     description: "SMM",
-    content: content_6,
+    content: content_8,
   },
   {
     id: 12,
     thumbnail: thumbnail_12,
     title: "UNNECESSARY",
     description: "DES/BRANDING/SMM/WEBSITE",
-    content: content_6,
+    content: content_5,
   },
 ];
 
@@ -141,11 +150,7 @@ const ContentSection = memo(({ selectedItem, theme }) => {
       <p style={{color: theme.backgroundColor}}>{selectedItem.title}</p>
       <p style={{color: theme.backgroundColor}}>{selectedItem.description}    </p>
       <p style={{color: theme.backgroundColor}}>
-        Globally recognized Independent Designer and Creative Director
-        based in the Netherlands. Working at the intersection of design, art,
-        and photography with a host of international clients that includes
-        Getty Institute, Adobe, Meta, Adidas, Bill Gates Ventures, VanMoof,
-        Lexus, Toyota, Samsung, ECCO, and more.
+      We don’t chase trends—we set them. With innovation, storytelling, and design that captivates, we transform brands into unforgettable experiences. Whether through expressive creativity, high-energy strategy, or sleek minimalism, we craft movements that inspire and influence. Your brand isn’t just another name—it’s a statement. Let’s make it legendary.
         <br/><br/><br/><br/><br/>
         mellowyellow@gmail.com
       </p>

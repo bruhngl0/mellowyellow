@@ -85,7 +85,7 @@ const Hover = ({ servicesData }) => {
             style={{ width: "100%", maxWidth: "525px", height: "auto", boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)" }}
           
           />
-          <motion.p style={{ fontSize: "1.2rem", textAlign: "center", maxWidth: "400px", marginTop: "10px" }} variants={variants}>
+          <motion.p style={{ fontSize: "0.8rem", textAlign: "left", maxWidth: "450px", padding: "10px", }} variants={variants}>
             {activeService.description}
           </motion.p>
         </motion.div>

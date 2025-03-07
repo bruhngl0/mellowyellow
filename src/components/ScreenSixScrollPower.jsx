@@ -90,10 +90,7 @@ const ScreenSixScrollPower = () => {
                 DINING
               </p>
               <p className="scrollPower-mini">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                consequuntur, suscipit sint reiciendis blanditiis, atque fugiat
-                corporis tempora impedit maxime odit quae? Doloremque nemo
-                itaque molestiae voluptas perspiciatis veniam excepturi?
+              creating a unique blend of meaningful conversations, community bonding, and mindful eating experiences. These gatherings offer a space for individuals to connect over curated meals, fostering mental well-being and a sense of belonging. By combining the principles of brain wellness with the joy of shared dining, Optimal Minds promotes holistic well-being through engaging discussions, nourishing food, and a welcoming atmosphere.
               </p>
             </div>
           </div>

@@ -19,28 +19,28 @@ export const servicesData = [
   {
     id: 1,
     title: "BRANDING",
-    description: "Expert psychiatric care for ADHD, anxiety, depression, bipolar disorder, and more.",
+    description: "From logo design to brand storytelling, we ensure every element reflects your vision and resonates with your audience.",
   
     image: "https://placehold.co/1200?text=Neuropsychiatry"
   },
   {
     id: 2,
     title: "SOCIAL MEDIA MARKETING",
-    description: "Advanced neuropsychiatric interventions for cognitive and emotional well-being.",
+    description: "Our approach combines creativity, strategy, and analytics to ensure your brand stands out in the digital crowd.",
  
     image: "https://placehold.co/1200?text=Neuropsychiatry"
   },
   {
     id: 3,
     title: "PR ACTIVITIES",
-    description: "Personalized counseling for individuals, couples, and families.",
+    description: "From media outreach to event planning, our solutions are designed to connect with the right audience, at the right time.",
   
     image: "https://placehold.co/1200?text=Counseling+%26+Therapy"
   },
   {
     id: 4,
     title: "WEB DES/DEV",
-    description: "Holistic therapies including stress management and mindfulness training.",
+    description: "Our team combines cutting-edge design with robust technology to create digital platforms that reflect your brand and achieve your goals.",
    
     image: "https://placehold.co/1200?text=Mindfulness+%26+Wellness"
   },
