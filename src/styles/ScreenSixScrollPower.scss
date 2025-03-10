@@ -124,7 +124,7 @@
   @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
-    display: none;
+  
   }
 }
 
@@ -138,6 +138,7 @@
   @media (max-width: 768px) {
     width: 100%;
     justify-content: center;
+    width: 100%;
   }
   
   img {
@@ -146,8 +147,9 @@
     padding-left: 2rem;
     
     @media (max-width: 768px) {
-      padding: 0 1rem;
+   
       width: 100%;
+      padding-left: 0rem;
     }
   }
 }
@@ -159,7 +161,7 @@
   
   @media (max-width: 768px) {
     width: 100%;
-    padding: 1rem;
+    padding: 0rem;
   }
 }
 
