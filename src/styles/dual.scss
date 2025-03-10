@@ -47,13 +47,15 @@
 
 @media (max-width: 500px) {
    .dual-main{
-     margin-top: 0;
+     margin-top: 10;
     flex-direction: column;
+    
    }
 
 
    .dual-left{
     width: 100%;
+    display: none;
   
     
    }

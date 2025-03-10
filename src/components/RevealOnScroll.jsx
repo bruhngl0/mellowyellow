@@ -61,8 +61,8 @@ const RevealOnScroll = ({ props, threshold = 0.6 }) => {
           loop
           muted
           playsInline // Added for better mobile support
-          className="video-bg-screen"
-          style={{width: "40vw" , height: "auto"}}
+          className="video-tv-screen"
+         
         >
           <source src="tvCropped.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -70,12 +70,7 @@ const RevealOnScroll = ({ props, threshold = 0.6 }) => {
         
         <motion.div 
           className='ros' 
-          style={{
-            display: "flex", 
-            flexDirection: "column", 
-            marginLeft: "2rem", 
-            justifyContent: "flex-start"
-          }}
+       
           variants={variants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
