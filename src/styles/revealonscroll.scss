@@ -12,10 +12,10 @@
   
   
   .reveal-wrapper {
-      position: relative;
+
       width: 100%;
       height: auto;
-      background-color: red;
+
       display: flex;
 
       margin: 0;
@@ -70,36 +70,7 @@
 
     
   
-     .reveal-wrapper {
-        position: relative;
-        width: 100%;
-        height: auto;
-      
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       
-        background-color: #000000;
-        margin: 0;
-        padding: 0;
-        font-family: "Cool";
-        padding-top: 10rem;
-  
-  
-  
-  
-       .reveal-content {
-          width: 100%;
-          will-change: transform, opacity;
-        
-  
-          >h1{
-            font-size: 3rem;
-            padding-left: 1.5rem;
-         
-          }
-        }
-      }
+    
     
     .inner-div-ros{
       display: flex;
