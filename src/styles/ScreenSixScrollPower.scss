@@ -21,6 +21,7 @@
   
   @media (max-width: 500px) {
     margin-top: 0;
+    margin-top: 8rem;
   }
 
   .scrollpower-main {
@@ -80,6 +81,7 @@
   align-items: center;
   overflow: hidden;
   background-size: cover;
+ 
   
   img {
     width: 90rem;
@@ -119,11 +121,13 @@
   display: flex;
   flex-direction: row;
   width: 100vw;
+  height: 100vh;
   padding-top: 2rem;
   
   @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
+    padding-top: 0rem;
   
   }
 }
@@ -138,18 +142,20 @@
   @media (max-width: 768px) {
     width: 100%;
     justify-content: center;
-    width: 100%;
   }
   
   img {
     width: 95%;
     height: auto;
     padding-left: 2rem;
+    padding-top: 0rem;
     
     @media (max-width: 768px) {
-   
-      width: 100%;
+
+      padding: 0 0rem;
+      width: 90%;
       padding-left: 0rem;
+      padding-top: 1rem;
     }
   }
 }
@@ -214,9 +220,9 @@
 }
 
 .sp-right-2 {
-  width: 80%;
+  width: 100%;
   height: auto;
-  background-color: green;
+
   
   @media (max-width: 768px) {
     display: flex;
@@ -232,18 +238,27 @@
     
     @media (max-width: 768px) {
       height: auto;
-      width: 80%;
+      width: 90%;
+      height: 90%;
     }
   }
 }
 
 .sp-right-vid {
   height: 35vh;
+  padding: 0;
+  padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-right: 0rem;
   
   @media (max-width: 768px) {
     height: auto;
-    width: 100%;
-    max-height: 25vh;
+
+    max-height: 40vh;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 10rem;
+
   }
 }
 
