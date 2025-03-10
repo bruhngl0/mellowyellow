@@ -153,6 +153,7 @@
       .video-container-screen{
         display: flex;
         flex-direction: column;
+    
        
       }
 
@@ -160,6 +161,7 @@
      .video-tv-screen{
       width: 100vw;
       padding-top: 5rem;
+      display: none;
 
      }
 
