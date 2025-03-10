@@ -15,7 +15,7 @@
       position: relative;
       width: 100%;
       height: auto;
- 
+      background-color: red;
       display: flex;
 
       margin: 0;
@@ -24,7 +24,7 @@
    
       display: flex;
       flex-direction: column;
-      padding-top: 12rem;
+      margin-top: 12rem;
     
       
       
@@ -68,7 +68,7 @@
      }
 
 
-    @media (max-width: 1300px) {
+    
   
      .reveal-wrapper {
         position: relative;
@@ -79,7 +79,7 @@
         justify-content: center;
         align-items: center;
        
-        background-color: #cfb49c;
+        background-color: #000000;
         margin: 0;
         padding: 0;
         font-family: "Cool";
@@ -100,7 +100,7 @@
           }
         }
       }
-    }
+    
     .inner-div-ros{
       display: flex;
       flex-direction: row;
@@ -212,7 +212,7 @@
       >ul{
         >li{
        
-         
+         display: none;
         }
       }
     }
