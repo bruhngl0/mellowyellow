@@ -17,8 +17,16 @@
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+  
+
+}
+.title-fancy{
+  padding: 0rem;
 }
 
+.description-fancy{
+  padding: 0rem;
+}
 .scrolling-text-container {
   position: relative;
   width: 100%;
@@ -83,14 +91,23 @@
 
 @media (max-width: 500px) {
   .container-fancy {
-    width: 95%;
+    width: 100%;
+  
   }
   
   .box-fancy h1 {
-    font-size: 60px;
+    font-size: 90px;
   }
   
   .overlay-image {
     width: min(250px, 70vw);
+  }
+
+  .title-fancy{
+    padding: 1rem;
+  }
+  
+  .description-fancy{
+    padding: 1rem;
   }
 }
