@@ -162,17 +162,7 @@ const ContentSection = memo(({ selectedItem, theme }) => {
         <br/><br/><br/><br/>
         mellowyellow@gmail.com
       </p>
-      <p style={{color: theme.backgroundColor}}>IST:2:30pm  <video
-          autoPlay
-          loop
-          muted
-          playsInline // Added for better mobile support
-          className="cube-vid"
-          style={{width: "auto" , height: "8.5vh", marginTop: "1rem" , borderRadius: "100px", marginRight : "2rem"}}
-        >
-          <source src="cube.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video></p>
+      <p style={{color: theme.backgroundColor}}>IST:2:30pm  </p>
     </motion.div>
   );
 });
