@@ -156,9 +156,10 @@ const ContentSection = memo(({ selectedItem, theme }) => {
     >
       <p style={{color: theme.backgroundColor}}>{selectedItem.title}</p>
       <p style={{color: theme.backgroundColor}}>{selectedItem.description}    </p>
-      <p style={{color: theme.backgroundColor}}>
-      We don’t chase trends—we set them. With innovation, storytelling, and design that captivates, we transform brands into unforgettable experiences. Whether through expressive creativity, high-energy strategy, or sleek minimalism, we craft movements that inspire and influence. Your brand isn’t just another name—it’s a statement. Let’s make it legendary.
-        <br/><br/><br/><br/><br/>
+      <p style={{color: theme.backgroundColor, fontSize: "0.8rem"}}>
+      OUR CLIENTS <br/><br/><br/>
+      We don’t chase trends—we set them. With innovation, storytelling, and design that captivates, we transform brands into unforgettable experiences. Whether through expressive creativity, high-energy strategy, or sleek minimalism, we craft movements that inspire and influence.
+        <br/><br/><br/><br/>
         mellowyellow@gmail.com
       </p>
       <p style={{color: theme.backgroundColor}}>IST:2:30pm  <video
@@ -167,9 +168,9 @@ const ContentSection = memo(({ selectedItem, theme }) => {
           muted
           playsInline // Added for better mobile support
           className="cube-vid"
-          style={{width: "auto" , height: "14.5vh", marginTop: "1rem"}}
+          style={{width: "auto" , height: "8.5vh", marginTop: "1rem" , borderRadius: "100px", marginRight : "2rem"}}
         >
-          <source src="small.mp4" type="video/mp4" />
+          <source src="cube.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video></p>
     </motion.div>
