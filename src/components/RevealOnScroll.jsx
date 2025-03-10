@@ -4,7 +4,7 @@ import "../styles/revealonscroll.scss";
 import { useColor } from "../context/ColorContext";
 import Hover from './Hover';
 
-const RevealOnScroll = ({ props, threshold = 0.6 }) => {
+const RevealOnScroll = ({ props, threshold = 0.3 }) => {
   const { theme } = useColor();
   const ref = useRef(null);
   const isInView = useInView(ref, {
@@ -33,17 +33,22 @@ const RevealOnScroll = ({ props, threshold = 0.6 }) => {
         animate={isInView ? "visible" : "hidden"}
       >
         <div className='inner-div-ros'>
-        <h1 style={{color: theme.backgroundColor, }}>{props} <video
-          autoPlay
-          loop
-          muted
-          playsInline // Added for better mobile support
-          className="video-bg-screen"
-          style={{width: "auto" , height: "15.5vh", marginLeft: "1rem", }}
-        >
-          <source src="hero.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video></h1>
+        <h1 style={{ color: theme.backgroundColor }}>
+    {props || "Default Title"} {/* Added fallback to prevent crashes */}
+    
+    {/* Video Section */}
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="video-small-screen"
+    
+    >
+      <source src="/hero.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </h1>
         
         </div>
 
