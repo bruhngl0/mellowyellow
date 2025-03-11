@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import "../styles/headers.scss"
+import FloatingDock from './FloatingDock';
+import { useColor } from "../context/ColorContext";
 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme } = useColor();
 
   const menuItems = [
     { name: 'Gallery', link: '/gallery' },
@@ -27,7 +30,7 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className='header'>
+    <div className='header' style={{backgroundColor: theme.backgroundColor}}>
       {<h1 className='left-head' onClick={handleButtonClick}>❒❒❒</h1>}
       <img src = "" className='iris'/>
       <div className={`slide-menu ${isMenuOpen ? 'open' : ''}`}>
@@ -42,7 +45,7 @@ const Header = () => {
         <span style= {{fontSize: "20px" , color: "black", fontWeight: "200", paddingTop:"3px", paddingBottom: "3px"}}>Social Media: (Coming Soon)</span>
         <span style= {{fontSize: "20px", color: "black", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}>Instagram (bruh.ngl)</span>
         <span style= {{fontSize: "20px", color: "black", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}>Twitter</span>
-        <span>About</span>
+        <span style= {{fontSize: "40px", color: "gray", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}> Themes <br/><br/><FloatingDock /></span>
         
       </div>
 
