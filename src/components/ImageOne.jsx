@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import "../styles/works.scss"
+
 
 const ImageOne = ({ images, direction = "random" }) => {
   const sliderRef = useRef(null);
