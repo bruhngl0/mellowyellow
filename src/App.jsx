@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 
+
 import { ColorProvider, useColor } from "./context/ColorContext";
 
 import Products from "./components/Products";
@@ -13,6 +14,7 @@ import FloatingDock from "./components/FloatingDock";
 import Services from "./components/Services";
 import Works from "./components/Works";
 import Fancy from "./components/Fancy";
+import Branding from "./components/Branding";
 
 
 
@@ -20,22 +22,20 @@ import Fancy from "./components/Fancy";
 
 export const themes = [
   {
-    primaryColor: "#fff",
-    secondaryColor: "black",
-    backgroundColor: "white",
- 
-  },
-  {
     primaryColor: "#fff", // Dodger Blue
     secondaryColor: "black", // Tomato Red
     backgroundColor: "#D4D689", // Deep Black
   },
-  {
-    primaryColor: "white",
-    
 
+  { 
+    primaryColor: "#fff",
     secondaryColor: "black",
-    backgroundColor: "#494848",
+    backgroundColor: "white",
+  },
+  {
+  primaryColor: "#fff",
+    secondaryColor: "black",
+    backgroundColor: "green",
   },
   {
     primaryColor: "#fff",
@@ -43,14 +43,14 @@ export const themes = [
     backgroundColor: "orange",
   },
   {
-    primaryColor: "#fff", // Vibrant Orange
-    secondaryColor: "#000", // Fresh Green
-    backgroundColor: "seagreen", // Light Gray
-  },
-  {
     primaryColor: "white", // Strong Blue
     secondaryColor: "#000", // Pink Magenta
     backgroundColor: "pink", // Pure White
+  },
+  {
+    primaryColor: "white",
+    secondaryColor: "black",
+    backgroundColor: "#494848",
   },
   {
     primaryColor: "white", // Deep Purple
@@ -65,14 +65,15 @@ const App = () => {
       <ColorProvider>
         <Routes>
           <Route path="/" element={<Layout />} />
-          <Route path="screensix" element={<ScreenSix />} />
-          <Route path="products" element={<Products />} />
-          <Route path="ani" element={<AnimatedServices />} />
-          <Route path="floating-dock" element={<FloatingDock />} />
+          <Route path="/screensix" element={<ScreenSix />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/ani" element={<AnimatedServices />} />
+          <Route path="/floating-dock" element={<FloatingDock />} />
+          <Route path = "/branding" element= {<Branding />} />
         
-          <Route path="services" element={<Services />} />
-          <Route path="works" element={<Works />} />
-          <Route path="fancy" element={<Fancy />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/works" element={<Works />} />
+          <Route path="/fancy" element={<Fancy />} />
         </Routes>
       </ColorProvider>
     </Router>
