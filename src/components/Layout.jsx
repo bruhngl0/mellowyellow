@@ -53,7 +53,10 @@ const Layout = () => {
   return (
    
       <div className="layout-main">
-       
+      
+      
+          
+           <ScreenSixScrollPower />
        
         <ScrollComponent />
       
