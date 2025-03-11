@@ -53,7 +53,9 @@ const Layout = () => {
   return (
    
       <div className="layout-main">
+        
       
+           <Dual />
            <Video />
           
            <ScreenSixScrollPower />
