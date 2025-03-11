@@ -11,7 +11,7 @@ const HeroVideo = () => {
           playsInline // Added for better mobile support
           className="video-bg-screen"
         >
-          <source src="shortdes.mp4" type="video/mp4" />
+          <source src="small.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
     </div>
