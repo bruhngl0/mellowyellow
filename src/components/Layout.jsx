@@ -11,6 +11,7 @@ import ScrollComponent from "./ScrollComponent";
 import RevealOnScroll from "./RevealOnScroll";
 import Hover from "./Hover";
 import Header from "./Header";
+import Video from "./Video";
 
 
 
@@ -60,6 +61,7 @@ const Layout = () => {
         <ScreenSix /> */}
       
            <Dual />
+           <Video />
           
            <ScreenSixScrollPower />
        
