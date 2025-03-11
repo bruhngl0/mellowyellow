@@ -6,6 +6,9 @@
  
   font-family: helvetica;
   background-color: transparent;
+ 
+
+ 
 }
 
 @font-face {
@@ -18,12 +21,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-overflow-x: hidden;
+
   margin: 0;
 padding: 0;
 overflow-x: hidden;
 background-color: rgb(7, 7, 7);
 color: #fff;
+
 
 }
 
