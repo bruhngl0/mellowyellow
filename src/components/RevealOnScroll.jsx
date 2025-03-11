@@ -99,7 +99,7 @@ const RevealOnScroll = ({ props, threshold = 0.3 }) => {
                 transition: {
                   duration: 1.6,
                   ease: [0.22, 1, 0.36, 1],
-                  delayChildren: 1,
+                  delayChildren: 1.5,
                   staggerChildren: 0.2
                 }
               }
