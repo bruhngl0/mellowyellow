@@ -1,6 +1,24 @@
 import React from 'react'
+import { useColor } from '../context/ColorContext'
+import { motion } from 'framer-motion'
 
 const Video = () => {
+
+  const {theme} = useColor()
+
+  // Define animation variants
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.6,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
   return (
     <div className='mobile-vid'>
     <div className="video-container-screen-mid">
@@ -19,12 +37,34 @@ const Video = () => {
 
 
       <div className='video-list'>
-        <ul>
-           <li>BRANDING</li> 
-            <li>MARKETING</li>
-            <li>PR ACTIVITIES</li>
-            <li>WEB DES/DEV</li>
-        </ul>
+        <motion.ul
+          initial="hidden"
+          whileInView="visible"
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 1.6,
+                ease: [0.22, 1, 0.36, 1],
+                delayChildren: 0.3,
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+        >
+          {["BRANDING", "MARKETING", "PR ACTIVITIES", "WEB DES/DEV"].map((item, index) => (
+            <motion.li
+              key={index}
+              variants={variants}
+            >
+              <a href={`/${item.toLowerCase()}`} style={{ color: "inherit", textDecoration: "none" }}>
+                {item}
+              </a>
+            </motion.li>
+          ))}
+        </motion.ul>
       </div>
 
 

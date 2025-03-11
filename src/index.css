@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+ 
   margin: 0;
 padding: 0;
 overflow-x: hidden;
@@ -46,7 +46,10 @@ ul {
   unicode-bidi: isolate;
 }
 
-
+a{
+  text-decoration: none;
+  color: white;
+}
 ::-webkit-scrollbar {
   display: none;
 }

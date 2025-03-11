@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="hero1-3-2-1">
             <AnimatedServices />
           </div>
-          <div className="hero1-3-2-2" style={{ border: `1px solid ${theme.backgroundColor}` }}>
+          <div className="hero1-3-2-2" style={{ border: `1px solid black` }}>
             <ScreenVideo />
           </div>
         </div>
