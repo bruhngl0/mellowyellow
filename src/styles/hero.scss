@@ -143,18 +143,22 @@
 
   .hero1-main{
   margin: 0;
-
+ 
  
  
   }
-
+ 
+  .hero1-1{
+    display: none;
+  }
 
   .hero1-2{
-     
+    
   }
 
   .hero1-1-1{
     border-right: none;
+    display: none;
   }
   .hero1-3 {
     display: flex;
@@ -185,13 +189,13 @@
 
 
 .hero1-1-1{
-  width: 100%;
+  width: 50%;
   
 }
 
 .hero1-1-2{
 
-display: none;
+width: 50%;
 }
 
 .test-container {

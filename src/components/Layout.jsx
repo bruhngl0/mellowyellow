@@ -10,6 +10,7 @@ import Dual from "./Dual";
 import ScrollComponent from "./ScrollComponent";
 import RevealOnScroll from "./RevealOnScroll";
 import Hover from "./Hover";
+import Header from "./Header";
 
 
 
@@ -51,6 +52,7 @@ const Layout = () => {
   return (
    
       <div className="layout-main">
+        <Header />
         <Hero />
         <RevealOnScroll props = "DESIGN WITHOUT MEANING  IS  JUST AN ANOTHER  IMAGE  WITH   NOISE!"/>
      <Hover servicesData={servicesData} />
