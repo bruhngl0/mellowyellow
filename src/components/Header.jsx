@@ -61,7 +61,7 @@ const Header = () => {
       </div>
       </div>
       
-      <h1 className='right-head'>Reach Out</h1>
+      <h1 className='right-head'>MELLOW YELLOW</h1>
     </div>
   );
 };
