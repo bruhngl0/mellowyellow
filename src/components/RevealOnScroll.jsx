@@ -19,7 +19,9 @@ const RevealOnScroll = ({ props, threshold = 0.3 }) => {
       y: 0,
       transition: {
         duration: 1.6,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.22, 1, 0.36, 1],
+        delayChildren: 1,
+        staggerChildren: 0.2,
       }
     }
   };
@@ -79,6 +81,7 @@ const RevealOnScroll = ({ props, threshold = 0.3 }) => {
           variants={variants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
+          
         >
           <p>we transform your social media presence into a powerful platform for connection and growth. Our approach is to combine creativity, strategy, and analytics to ensure, your brand stands out in the digital crowd.</p>
           
@@ -96,7 +99,7 @@ const RevealOnScroll = ({ props, threshold = 0.3 }) => {
                 transition: {
                   duration: 1.6,
                   ease: [0.22, 1, 0.36, 1],
-                  delayChildren: 0.3,
+                  delayChildren: 1,
                   staggerChildren: 0.2
                 }
               }
