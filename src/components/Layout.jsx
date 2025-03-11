@@ -54,6 +54,7 @@ const Layout = () => {
    
       <div className="layout-main">
        
+        <Hero />
         <RevealOnScroll props = "DESIGN WITHOUT MEANING  IS  JUST AN ANOTHER  IMAGE  WITH   NOISE!"/>
      <Hover servicesData={servicesData} />
         {/* <Services />
