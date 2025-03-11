@@ -53,17 +53,7 @@ const Layout = () => {
   return (
    
       <div className="layout-main">
-        <Header />
-        <Hero />
-        <RevealOnScroll props = "DESIGN WITHOUT MEANING  IS  JUST AN ANOTHER  IMAGE  WITH   NOISE!"/>
-     <Hover servicesData={servicesData} />
-        {/* <Services />
-        <ScreenSix /> */}
-      
-           <Dual />
-           <Video />
-          
-           <ScreenSixScrollPower />
+       
        
         <ScrollComponent />
       
