@@ -45,7 +45,7 @@ const Header = () => {
         <span style= {{fontSize: "20px" , color: "black", fontWeight: "200", paddingTop:"3px", paddingBottom: "3px"}}>Social Media: (Coming Soon)</span>
         <span style= {{fontSize: "20px", color: "black", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}>Instagram (bruh.ngl)</span>
         <span style= {{fontSize: "20px", color: "black", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}>Twitter</span>
-        <span style= {{fontSize: "40px", color: "gray", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}> Themes <br/><br/><FloatingDock /></span>
+        <span style= {{fontSize: "40px", color: "gray", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}> Themes<br/><FloatingDock /></span>
         
       </div>
 
