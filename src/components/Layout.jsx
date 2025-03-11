@@ -12,6 +12,7 @@ import RevealOnScroll from "./RevealOnScroll";
 import Hover from "./Hover";
 import Header from "./Header";
 import Video from "./Video";
+import HeroVideo from "./HeroVideo";
 
 
 
@@ -54,7 +55,8 @@ const Layout = () => {
    
       <div className="layout-main">
         <Header />
-
+        <Hero />
+        <HeroVideo />
         <RevealOnScroll props = "DESIGN WITHOUT MEANING  IS  JUST AN ANOTHER  IMAGE  WITH   NOISE!"/>
      <Hover servicesData={servicesData} />
         {/* <Services />
