@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="hero1-1-2">
           <div className="hero1-1-2-1">
             <ul>
-              <li style={{ color: "black" }}>◉ FEATURED</li>
+              <li style={{ color: "black" }}>◉ CLIENTS</li>
               <li style={{ color: "black" }}>◉ WORKS</li>
               <li style={{ color: "black" }}>◉ ENQUIRY</li>
             </ul>

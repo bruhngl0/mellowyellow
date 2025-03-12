@@ -59,6 +59,7 @@ const Hover = ({ servicesData }) => {
       />
       
       {service.icon}
+      <a href = {service.route}  style={{textDecoration: "none" , color: "white" , fontWeight: "400"}}>
       <motion.h3
         initial={{ color: "#fff" }}
         whileHover={{
@@ -66,9 +67,9 @@ const Hover = ({ servicesData }) => {
           transition: { duration: 0.3 },
         }}
       >
-        <a href = {service.route}  style={{textDecoration: "none" , color: "white" , fontWeight: "400"}}>
-        {service.title}</a>
-      </motion.h3>
+       
+        {service.title}
+      </motion.h3></a>
     </motion.div>
   ))}
 </motion.div>

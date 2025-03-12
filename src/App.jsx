@@ -15,6 +15,9 @@ import Services from "./components/Services";
 import Works from "./components/Works";
 import Fancy from "./components/Fancy";
 import Branding from "./components/Branding";
+import Marketing from "./components/Marketing";
+import SocialDining from "./components/SocialDining";
+import Webdes from "./components/Webdes";
 
 
 
@@ -70,6 +73,9 @@ const App = () => {
           <Route path="/ani" element={<AnimatedServices />} />
           <Route path="/floating-dock" element={<FloatingDock />} />
           <Route path = "/branding" element= {<Branding />} />
+          <Route path = "/marketing" element = {<Marketing/>} />
+          <Route path = "/socialdining" element = {<SocialDining/>} />
+          <Route path = "/webdes" element = {<Webdes/>} />
         
           <Route path="/services" element={<Services />} />
           <Route path="/works" element={<Works />} />
