@@ -18,6 +18,7 @@ import Branding from "./components/Branding";
 import Marketing from "./components/Marketing";
 import SocialDining from "./components/SocialDining";
 import Webdes from "./components/Webdes";
+import ServiceShowcase from "./components/ServiceShowcase";
 
 
 
@@ -76,6 +77,7 @@ const App = () => {
           <Route path = "/marketing" element = {<Marketing/>} />
           <Route path = "/socialdining" element = {<SocialDining/>} />
           <Route path = "/webdes" element = {<Webdes/>} />
+          <Route path = "/sc" element = {<ServiceShowcase />} />
         
           <Route path="/services" element={<Services />} />
           <Route path="/works" element={<Works />} />

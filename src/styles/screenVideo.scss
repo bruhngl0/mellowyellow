@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column; 
     margin-top: 7rem;
-    display: none;
+    
 
     > ul {
         display: flex;
@@ -40,7 +40,7 @@
             display: block;
             margin-top: 1rem;
             position: relative;
-            width: 90%;
+            width: 96%;
             padding: 0.5rem 1rem;
             border-radius: 12px;
             background: rgba(255, 255, 255, 0.1);
@@ -52,6 +52,13 @@
             }
         }
     }
+}
+
+.mobile-vid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 // Mobile specific styles
@@ -84,7 +91,7 @@
             display: flex;
             flex-direction: column;
             list-style: none;
-            width: 100vw;
+            width: 92vw;
             justify-content: center;
             align-items: center;
             padding-left: 0rem;

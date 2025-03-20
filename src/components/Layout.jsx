@@ -13,6 +13,7 @@ import Hover from "./Hover";
 import Header from "./Header";
 import Video from "./Video";
 import HeroVideo from "./HeroVideo";
+import ServiceShowcase from "./ServiceShowcase";
 
 
 
@@ -58,7 +59,7 @@ const Layout = () => {
         <Hero />
         <HeroVideo />
         <RevealOnScroll props = "DESIGN WITHOUT MEANING  IS  JUST AN ANOTHER  IMAGE  WITH   NOISE!"/>
-     <Hover servicesData={servicesData} />
+     <ServiceShowcase />
         {/* <Services />
         <ScreenSix /> */}
       
