@@ -89,19 +89,18 @@
   background-color: transparent;
 }
 
-
-@media (max-width: 1500px) {
+@media (max-width: 1900px) {
   .container-fancy {
     width: 100%;
   
   }
   
   .box-fancy h1 {
-    font-size: 75px;
+    font-size: 120px;
   }
   
   .overlay-image {
-    width: min(250px, 60vw);
+    width: min(350px, 60vw);
   }
 
   .title-fancy{
@@ -112,14 +111,38 @@
     padding-left: 1rem;
   }
 }
-@media (max-width: 1400px) {
+
+
+@media (max-width: 1800px) {
   .container-fancy {
     width: 100%;
   
   }
   
   .box-fancy h1 {
-    font-size: 70px;
+    font-size: 120px;
+  }
+  
+  .overlay-image {
+    width: min(350px, 60vw);
+  }
+
+  .title-fancy{
+    padding-left: 1rem;
+  }
+  
+  .description-fancy{
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 1600px) {
+  .container-fancy {
+    width: 100%;
+  
+  }
+  
+  .box-fancy h1 {
+    font-size: 120px;
   }
   
   .overlay-image {
@@ -137,18 +160,20 @@
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1540px) {
   .container-fancy {
     width: 100%;
-  
+
   }
   
   .box-fancy h1 {
-    font-size: 65px;
+    font-size: 119px;
+ 
+ 
   }
   
   .overlay-image {
-    width: min(250px, 70vw);
+    width: min(350px, 70vw);
     height: 80%;
   }
 
@@ -164,6 +189,7 @@
 @media (max-width: 800px) {
   .container-fancy {
     width: 100%;
+   
   
   }
   
@@ -183,6 +209,8 @@
     padding-left: 1rem;
   }
 }
+
+
 @media (max-width: 500px) {
   .container-fancy {
     width: 100%;
