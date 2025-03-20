@@ -89,6 +89,100 @@
   background-color: transparent;
 }
 
+
+@media (max-width: 1500px) {
+  .container-fancy {
+    width: 100%;
+  
+  }
+  
+  .box-fancy h1 {
+    font-size: 75px;
+  }
+  
+  .overlay-image {
+    width: min(250px, 60vw);
+  }
+
+  .title-fancy{
+    padding-left: 1rem;
+  }
+  
+  .description-fancy{
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 1400px) {
+  .container-fancy {
+    width: 100%;
+  
+  }
+  
+  .box-fancy h1 {
+    font-size: 70px;
+  }
+  
+  .overlay-image {
+    width: min(250px, 60vw);
+    height: 90%;
+  }
+
+  .title-fancy{
+    padding-left: 1rem;
+  }
+  
+  .description-fancy{
+    padding-left: 1rem;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .container-fancy {
+    width: 100%;
+  
+  }
+  
+  .box-fancy h1 {
+    font-size: 65px;
+  }
+  
+  .overlay-image {
+    width: min(250px, 70vw);
+    height: 80%;
+  }
+
+  .title-fancy{
+    padding-left: 1rem;
+  }
+  
+  .description-fancy{
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .container-fancy {
+    width: 100%;
+  
+  }
+  
+  .box-fancy h1 {
+    font-size: 70px;
+  }
+  
+  .overlay-image {
+    width: min(250px, 60vw);
+  }
+
+  .title-fancy{
+    padding-left: 1rem;
+  }
+  
+  .description-fancy{
+    padding-left: 1rem;
+  }
+}
 @media (max-width: 500px) {
   .container-fancy {
     width: 100%;
