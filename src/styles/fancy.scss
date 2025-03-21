@@ -831,6 +831,26 @@
 }
 
 
+@media (max-width: 1280px) and (max-height: 585px) {
+  .container-fancy {
+    width: 100%;
+  }
+
+  .box-fancy h1 {
+    font-size: 50px;
+  }
+
+  .overlay-image {
+    width: min(350px, 70vw);
+    height: 80%;
+  }
+
+  .title-fancy, .description-fancy {
+    padding-left: 0rem;
+  }
+}
+
+
 @media (max-width: 1200px) and (max-height: 800px) {
   .container-fancy {
     width: 100%;
