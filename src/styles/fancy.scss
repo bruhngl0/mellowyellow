@@ -161,6 +161,28 @@
 /* MacBook Pro 16" (Default Mode) */
 
 
+
+
+@media (max-width: 1854px) and (max-height: 970px) {
+  .container-fancy {
+    width: 100%;
+  }
+
+  .box-fancy h1 {
+    font-size: 130px;
+  }
+
+  .overlay-image {
+    width: min(350px, 70vw);
+    height: 80%;
+  }
+
+  .title-fancy, .description-fancy {
+    padding-left: 1rem;
+  }
+}
+
+
 @media (max-width: 1728px) and (max-height: 1117px) {
   .container-fancy {
     width: 100%;
@@ -831,6 +853,46 @@
 }
 
 
+@media (max-width: 1310px) and (max-height: 631px) {
+  .container-fancy {
+    width: 100%;
+  }
+
+  .box-fancy h1 {
+    font-size: 55px;
+  }
+
+  .overlay-image {
+    width: min(350px, 70vw);
+    height: 80%;
+  }
+
+  .title-fancy, .description-fancy {
+    padding-left: 0rem;
+  }
+}
+
+
+@media (max-width: 1280px) and (max-height: 600px) {
+  .container-fancy {
+    width: 100%;
+  }
+
+  .box-fancy h1 {
+    font-size: 55px;
+  }
+
+  .overlay-image {
+    width: min(350px, 70vw);
+    height: 80%;
+  }
+
+  .title-fancy, .description-fancy {
+    padding-left: 0rem;
+  }
+}
+
+
 @media (max-width: 1280px) and (max-height: 585px) {
   .container-fancy {
     width: 100%;
@@ -850,6 +912,25 @@
   }
 }
 
+
+@media (max-width: 1256px) and (max-height: 607px) {
+  .container-fancy {
+    width: 100%;
+  }
+
+  .box-fancy h1 {
+    font-size: 55px;
+  }
+
+  .overlay-image {
+    width: min(350px, 70vw);
+    height: 80%;
+  }
+
+  .title-fancy, .description-fancy {
+    padding-left: 0rem;
+  }
+}
 
 @media (max-width: 1200px) and (max-height: 800px) {
   .container-fancy {
@@ -917,6 +998,26 @@
 
   .box-fancy h1 {
     font-size: 74px;
+  }
+
+  .overlay-image {
+    width: min(350px, 70vw);
+    height: 80%;
+  }
+
+  .title-fancy, .description-fancy {
+    padding-left: 0rem;
+  }
+}
+
+
+@media (max-width: 1200px) and (max-height: 585px) {
+  .container-fancy {
+    width: 100%;
+  }
+
+  .box-fancy h1 {
+    font-size: 50px;
   }
 
   .overlay-image {
