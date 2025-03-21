@@ -10,9 +10,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: white;
+  background-color: rgb(255, 250, 250);
   margin-top: 18rem;
   height: 100vh;
+  width: 100vw;
   
   @media (max-width: 768px) {
     margin-top: 8rem;
@@ -72,7 +73,7 @@
 
 .new {
   height: 100vh;
-  background-color: #fff;
+  background-color: #ab1313;
   color: #000;
   width: 100%;
   display: flex;
