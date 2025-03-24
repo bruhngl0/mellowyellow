@@ -19,23 +19,27 @@ import Marketing from "./components/Marketing";
 import SocialDining from "./components/SocialDining";
 import Webdes from "./components/Webdes";
 import ServiceShowcase from "./components/ServiceShowcase";
+import Pr from "./components/Pr";
+import Web from "./components/Web";
+import ScrollComponent from "./components/ScrollComponent";
 
 
 
 
 
 export const themes = [
+  { 
+    primaryColor: "#fff",
+    secondaryColor: "black",
+    backgroundColor: "white",
+  },
   {
     primaryColor: "#fff", // Dodger Blue
     secondaryColor: "black", // Tomato Red
     backgroundColor: "#D4D689", // Deep Black
   },
 
-  { 
-    primaryColor: "#fff",
-    secondaryColor: "black",
-    backgroundColor: "white",
-  },
+
   {
   primaryColor: "#fff",
     secondaryColor: "black",
@@ -78,10 +82,13 @@ const App = () => {
           <Route path = "/socialdining" element = {<SocialDining/>} />
           <Route path = "/webdes" element = {<Webdes/>} />
           <Route path = "/sc" element = {<ServiceShowcase />} />
+          <Route path = "/clients" element={<ScrollComponent/>} />
         
           <Route path="/services" element={<Services />} />
           <Route path="/works" element={<Works />} />
           <Route path="/fancy" element={<Fancy />} />
+          <Route path = "/pr" element={<Pr/>} />
+          <Route path = "/web" element={<Web/>} />
         </Routes>
       </ColorProvider>
     </Router>

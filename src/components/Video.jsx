@@ -54,15 +54,17 @@ const Video = () => {
             },
           }}
         >
-          {["BRANDING", "MARKETING", "PR ACTIVITIES", "WEB DES/DEV"].map((item, index) => (
-            <motion.li
-              key={index}
-              variants={variants}
-            >
-              <a href={`/${item.toLowerCase()}`} style={{ color: "inherit", textDecoration: "none" }}>
-                {item}
-              </a>
-            </motion.li>
+           {[
+      { label: "CREATIVES", href: "/branding" },
+      { label: "MARKETING", href: "/marketing" },
+      { label: "BRANDING", href: "/pr" },
+      { label: "WEB DES/DEV", href: "/web" }
+    ].map((item, index) => (
+      <motion.li key={index} variants={variants}>
+        <a href={item.href} style={{ color: "inherit", textDecoration: "none" }}>
+          {item.label}
+        </a>
+      </motion.li>             
           ))}
         </motion.ul>
       </div>

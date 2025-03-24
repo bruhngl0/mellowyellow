@@ -17,6 +17,7 @@
       width: 10%;
       max-height: 100%;
       overflow-y: auto;
+     
    
      
       
@@ -137,6 +138,30 @@
     }
   }
 
+  @media (max-width: 1300px) {
+
+    .container-scroll{
+      gap: 5%;
+    }
+
+    .container-scroll .left-section-scroll{
+      width: 30%;
+    }
+    .container-scroll .right-section-scroll .right-section-top-scroll{
+     
+    flex-direction: column;
+    gap: 0px;
+    padding: 0px;
+      
+    }
+    .left-section-scroll{
+      width: 100%;
+    }
+  
+    .works__content{
+      display: none;
+    }
+  }
 
   @media (max-width: 500px) {
 

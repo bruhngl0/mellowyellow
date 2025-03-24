@@ -1,0 +1,29 @@
+.web{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+
+}
+
+.video-container-web{
+    width: 90vw;
+    margin-top: 2rem;
+}
+
+.para-web{
+   display: none;
+}
+
+
+@media (max-width: 768px) {
+    .para-web{
+        display: block;
+        padding: 1.2rem;
+        font-size: 18px;
+    }
+}

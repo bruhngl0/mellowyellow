@@ -40,20 +40,86 @@ const Header = () => {
         </div>
       
       <div className='large-group-top'>
-        <span style={{color: "black"}}>Home</span>
-        <span style={{color: "black"}}>Seasons</span>
-        <span style= {{fontSize: "20px" , color: "black", fontWeight: "200", paddingTop:"3px", paddingBottom: "3px"}}>Social Media: (Coming Soon)</span>
-        <span style= {{fontSize: "20px", color: "black", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}>Instagram (bruh.ngl)</span>
-        <span style= {{fontSize: "20px", color: "black", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}>Twitter</span>
+        <span style={{color: "black"}}><a href="/">Home</a></span>
+        <span style={{color: "black"}}><a href="/clients">Clients</a></span>
+        <span ><a href= "/branding" style= {{fontSize: "24px" , color: "black", fontWeight: "200", paddingTop:"3px", paddingBottom: "3px", letterSpacing: "-0.04em"}}>Works: (featured)</a></span>
+        <span><a href="/marketing" style= {{fontSize: "24px" , color: "black", fontWeight: "200", paddingTop:"3px", paddingBottom: "3px", letterSpacing: "-0.04em"}}>Branding (SMM)</a></span>
+        <span><a href="/web" style= {{fontSize: "24px" , color: "black", fontWeight: "200", paddingTop:"3px", paddingBottom: "3px", letterSpacing: "-0.04em"}}>Web Des/Dev</a></span>
         <span style= {{fontSize: "40px", color: "gray", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}> Themes<br/><FloatingDock /></span>
         
       </div>
 
       <div className='small-group-top'>
-        <span>Social Media:</span>
-        <span>Instagram</span>
-        <span>Twitter</span>
-        <span>Github</span>
+      <span>
+  <a
+    href="https://www.instagram.com/socialdining.in/"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      fontSize: "20px",
+      color: "black",
+      fontWeight: "200",
+      paddingTop: "3px",
+      paddingBottom: "3px",
+      letterSpacing: "-0.04em",
+    }}
+  >
+    Social Dining
+  </a>
+</span>
+       
+        <span>
+  <a
+    href="https://www.instagram.com/mellowyellowstudio/"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      fontSize: "20px",
+      color: "black",
+      fontWeight: "200",
+      paddingTop: "3px",
+      paddingBottom: "3px",
+      letterSpacing: "-0.04em",
+    }}
+  >
+    Instagram
+  </a>
+</span>
+
+<span>
+  <a
+    href="mailto:veeralijain09@gmail.com"
+    style={{
+      fontSize: "20px",
+      color: "black",
+      fontWeight: "200",
+      paddingTop: "3px",
+      paddingBottom: "3px",
+      letterSpacing: "-0.04em",
+    }}
+  >
+    Gmail (SMM)
+  </a>
+</span>
+
+<span>
+  <a
+    href="https://wa.me/+917760618621?text=Hi%2C%20I'm%20interested%20in%20your%20services"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      fontSize: "20px",
+      color: "black",
+      fontWeight: "200",
+      paddingTop: "3px",
+      paddingBottom: "3px",
+      letterSpacing: "-0.04em",
+    }}
+  >
+    WhatsApp
+  </a>
+</span>
+
        
         
       </div>

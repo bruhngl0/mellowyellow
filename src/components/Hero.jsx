@@ -25,9 +25,9 @@ const Hero = () => {
         <div className="hero1-1-2">
           <div className="hero1-1-2-1">
             <ul>
-              <li style={{ color: "black" }}>◉ CLIENTS</li>
-              <li style={{ color: "black" }}>◉ WORKS</li>
-              <li style={{ color: "black" }}>◉ ENQUIRY</li>
+              <li style={{ color: "black" }}><a href= "/clients" style={{color: "black"}}>◉ CLIENTS</a></li>
+              <li style={{ color: "black" }}><a href= "/branding" style={{color: "black"}}>◉ WORKS</a></li>
+              <li style={{ color: "black" }}><a href= "mailto:veeralijain09@gmail.com" style={{color: "black"}}>◉ ENQUIRY</a></li>
             </ul>
           </div>
           <div className="hero1-1-2-2"></div>
