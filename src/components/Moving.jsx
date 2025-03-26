@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import "../styles/moving.scss"
+import React, { useEffect, useRef } from "react";
+import "../styles/moving.scss";
 
 const Moving = () => {
   const scrollRef = useRef(null);
@@ -10,7 +10,7 @@ const Moving = () => {
 
     const scrollContainer = scrollRef.current;
     const scrollContent = contentRef.current;
-    
+
     // Clone the content for seamless looping
     const clonedContent = scrollContent.cloneNode(true);
     scrollContainer.appendChild(clonedContent);
@@ -35,11 +35,7 @@ const Moving = () => {
 
   return (
     <div className="scroll-container">
-      <div
-        ref={scrollRef}
-        className="scroll-text"
-     
-      >
+      <div ref={scrollRef} className="scroll-text">
         <div ref={contentRef} className="text-content">
           <span className="mx-4"> *BRANDING*</span>
           <span className="mx-4">*PACKAGING*</span>
@@ -54,3 +50,4 @@ const Moving = () => {
 };
 
 export default Moving;
+

@@ -60,7 +60,7 @@ const ScreenSixScrollPower = () => {
         </div>
         
         <div className="sp-mid">
-          <p className="scrollPower-p" style={{ color: theme.backgroundColor }}></p>
+       
           <p className="scrollPower-mini"></p>
         </div>
       </section>

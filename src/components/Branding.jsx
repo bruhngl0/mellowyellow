@@ -50,7 +50,7 @@ const Branding = () => {
   const images1 = [image5, image6, image7, image8,]
   const images2 = [image9, image10, image11, image12,]
   const images3 = [image13, image14, image15, image16,]
-  const images4 = [image17, image18, image19, image20,]
+  const images4 = [image17, image25, image19, image20,]
   const images5 = [image21, image22, image23, image24]
 
   return (
