@@ -75,7 +75,7 @@ const data = [
     thumbnail: thumbnail_6,
     title: "BHRAMA",
     description: "SMM/PRODUCTION",
-    content: content_11,
+    content: content_12,
   },
 
   {
@@ -90,7 +90,7 @@ const data = [
     thumbnail: thumbnail_8,
     title: "ITC",
     description: "SMM/PRODUCTION",
-    content: content_12,
+    content: content_11,
   },
   {
     id: 9,
@@ -107,13 +107,8 @@ const data = [
     description: "SMM",
     content: content_2,
   },
-  {
-    id: 11,
-    thumbnail: thumbnail_11,
-    title: "MRN",
-    description: "SMM",
-    content: content_8,
-  },
+  
+
   {
     id: 12,
     thumbnail: thumbnail_12,
@@ -121,13 +116,7 @@ const data = [
     description: "DES/BRANDING/SMM/WEBSITE",
     content: content_5,
   },
-  {
-    id: 13,
-    thumbnail: thumbnail_12,
-    title: "TICKLEPICKLE",
-    description: "DES/BRANDING/SMM/WEBSITE",
-    content: content_5,
-  },
+ 
 ];
 
 const Thumbnail = memo(({ item, index, activeIndex, dataLength, onMouseEnter }) => {
