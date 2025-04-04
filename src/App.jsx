@@ -22,6 +22,7 @@ import ServiceShowcase from "./components/ServiceShowcase";
 import Pr from "./components/Pr";
 import Web from "./components/Web";
 import ScrollComponent from "./components/ScrollComponent";
+import Production from "./components/Production";
 
 
 
@@ -89,6 +90,7 @@ const App = () => {
           <Route path="/fancy" element={<Fancy />} />
           <Route path = "/pr" element={<Pr/>} />
           <Route path = "/web" element={<Web/>} />
+          <Route path = "/production" element={<Production/>} />
         </Routes>
       </ColorProvider>
     </Router>

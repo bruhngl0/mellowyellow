@@ -17,7 +17,7 @@ const Pr = () => {
           playsInline
           className="pr-video"
         >
-          <source src="pr1.mp4" type="video/mp4" />
+          <source src="kafka.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -43,7 +43,7 @@ const Pr = () => {
           playsInline
           className="pr-video"
         >
-          <source src="pr2.mp4" type="video/mp4" />
+          <source src="pr1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
