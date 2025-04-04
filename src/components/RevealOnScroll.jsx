@@ -83,7 +83,7 @@ const RevealOnScroll = ({ props, threshold = 0.3 }) => {
           animate={isInView ? "visible" : "hidden"}
           
         >
-          <p>we transform your social media presence into a powerful platform for connection and growth. Our approach is to combine creativity, strategy, and analytics to ensure, your brand stands out in the digital crowd.</p>
+          <p>We transform your social media presence into a powerful platform for connection and growth. Our approach is to combine creativity, strategy, and analytics to ensure, your brand stands out in the digital crowd.</p>
           
           <motion.ul 
             style={{
