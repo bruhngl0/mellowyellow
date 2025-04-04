@@ -1,73 +1,52 @@
 import React from "react";
 import ImageOne from "./ImageOne";
-
-import image1 from "../../public/brd1.png";
-import image2 from "../../public/brd2.png";
-import image3 from "../../public/brd3.png";
-import image4 from "../../public/brd4.png";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import "../styles/pr.scss"
 
 
 
 
 
 const Pr = () => {
-  const images = [image1];
-  const images1 = [image2]
-  const images2 = [image3]
-  const images3 = [image4]
-  
-
   return (
-    <div className="moto" >
+    <div className="pr-video-container">
+      <div className="pr-video-item">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="pr-video"
+        >
+          <source src="pr1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-        <div  className= "moto1-branding" >
-    <div className="lol3" >  
-      <ImageOne images={images} />
-    </div>
-  
+      <div className="pr-video-item">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="pr-video"
+        >
+          <source src="pr3.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-   
-    </div>
-
-    <div  className= "moto2-branding" >
-    <div className="lol3" >  
-      <ImageOne images={images1} />
-    </div>
-  
-
-   
-    </div>
-
-
-    <div className = "moto3-branding">
-    <div className="lol3" >  
-      <ImageOne images={images2} />
-    </div>
-   
-   
-    </div>
-
-    <div className = "moto3-branding">
-    <div className="lol3" >  
-      <ImageOne images={images3} />
-    </div>
-   
-   
-    </div>
+      <div className="pr-video-item">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="pr-video"
+        >
+          <source src="pr2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   );
 };

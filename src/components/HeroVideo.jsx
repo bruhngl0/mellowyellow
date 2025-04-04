@@ -6,7 +6,7 @@ const HeroVideo = () => {
     <div className='hero-video'>
          <video 
           autoPlay 
-          loop 
+     
           muted 
           playsInline // Added for better mobile support
           className="video-bg-screen"

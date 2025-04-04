@@ -55,10 +55,10 @@ const Video = () => {
           }}
         >
            {[
-      { label: "CREATIVES", href: "/branding" },
+      { label: "WORKS", href: "/branding" },
       { label: "MARKETING", href: "/marketing" },
       { label: "BRANDING", href: "/pr" },
-      { label: "WEB DES/DEV", href: "/web" }
+      { label: "PR ACTIVITIES", href: "/web" }
     ].map((item, index) => (
       <motion.li key={index} variants={variants}>
         <a href={item.href} style={{ color: "inherit", textDecoration: "none" }}>
