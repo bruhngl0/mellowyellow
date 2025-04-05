@@ -21,7 +21,7 @@ const Video = () => {
 
   return (
     <div className='mobile-vid'>
-    <div className="video-container-screen-mid">
+      <div className="video-container-screen-mid">
         <video 
           autoPlay 
           loop 
@@ -29,12 +29,10 @@ const Video = () => {
           playsInline // Added for better mobile support
           className="video-container-screen-mid"
         >
-          <source src="video_1.mp4" type="video/mp4"  />
+          <source src="video_1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-       
       </div>
-
 
       <div className='video-list'>
         <motion.ul
@@ -54,23 +52,21 @@ const Video = () => {
             },
           }}
         >
-           {[
-      { label: "WORKS", href: "/branding" },
-      { label: "MARKETING", href: "/marketing" },
-      { label: "BRANDING", href: "/pr" },
-      { label: "PR ACTIVITIES", href: "/web" },
-      { label: "PRODUCTION", href: "/production" }
-    ].map((item, index) => (
-      <motion.li key={index} variants={variants}>
-        <a href={item.href} style={{ color: "inherit", textDecoration: "none" }}>
-          {item.label}
-        </a>
-      </motion.li>             
+          {[
+            { label: "WORKS", href: "/branding" },
+            { label: "MARKETING", href: "/marketing" },
+            { label: "BRANDING", href: "/pr" },
+            { label: "PR ACTIVITIES", href: "/web" },
+            { label: "PRODUCTION", href: "/production" }
+          ].map((item, index) => (
+            <motion.li key={index} variants={variants}>
+              <a href={item.href} style={{ color: "inherit", textDecoration: "none", display: "block" }}>
+                {item.label}
+              </a>
+            </motion.li>             
           ))}
         </motion.ul>
       </div>
-
-
     </div>
   )
 }

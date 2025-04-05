@@ -18,7 +18,7 @@ import thumbnail_12 from "../../public/thumb12.png";
 
 
 import content_1 from "../../public/thumb1desc.jpeg";
-import content_2 from "../../public/astrothumb.png";
+import content_2 from "../../public/astro_image.png";
 import content_3 from "../../public/palmsthumb.jpg";
 import content_4 from "../../public/thumb4desc.jpg";
 import content_5 from "../../public/unnssrythumb.jpg";
