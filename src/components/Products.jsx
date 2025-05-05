@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ImageAni from './ImageAni';
 import '../styles/products.scss';
-import image1 from "../../public/blue.png";
-import image2 from "../../public/blue.png";
-import image3 from "../../public/blue.png";
-import image4 from "../../public/blue.png";
-import image5 from "../../public/blue.png";
-import image6 from "../../public/blue.png";
+import image1 from "../../public/br3.png";
+import image2 from "../../public/br3.png";
+import image3 from "../../public/br3.png";
+import image4 from "../../public/br3.png";
+import image5 from "../../public/br3.png";
+import image6 from "../../public/br3.png";
 
 const Products = () => {
   const [selectedImage, setSelectedImage] = useState(null);
