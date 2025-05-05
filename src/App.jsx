@@ -5,9 +5,9 @@ import "./App.css";
 
 import { ColorProvider, useColor } from "./context/ColorContext";
 
-
+import Products from "./components/Products";
 import Layout from "./components/Layout";
-
+import ScreenSix from "./components/ScreenSix";
 import AnimatedServices from "./components/AnimatedServices";
 import Client from "./components/Client";
 import FloatingDock from "./components/FloatingDock";
@@ -74,8 +74,8 @@ const App = () => {
       <ColorProvider>
         <Routes>
           <Route path="/" element={<Layout />} />
-       
-        
+          <Route path="/screensix" element={<ScreenSix />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/ani" element={<AnimatedServices />} />
           <Route path="/floating-dock" element={<FloatingDock />} />
           <Route path = "/branding" element= {<Branding />} />
